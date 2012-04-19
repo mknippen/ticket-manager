@@ -10,6 +10,8 @@
 
 @interface DataAdder : NSObject
 
++ (void) populateData;
+
 + (void) populateNeededData;
 + (void) populateDummyData;
 

@@ -9,8 +9,16 @@
 #import "AppDelegate.h"
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+
+#import "DataAdder.h"
+
+@interface AppDelegate () {
+    BOOL shouldUseDataAdder;
+}
+
+@end
+
 
 @implementation AppDelegate
 
@@ -99,6 +107,11 @@
         __managedObjectContext = [[NSManagedObjectContext alloc] init];
         [__managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
+    
+    if (shouldUseDataAdder) {
+        [DataAdder populateData];
+    }
+    
     return __managedObjectContext;
 }
 
@@ -123,6 +136,10 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TicketManager.sqlite"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
+        shouldUseDataAdder = YES;
+	}
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

@@ -2,4 +2,7 @@
 
 @interface User : _User {}
 // Custom logic goes here.
+
+- (BOOL)isGuest;
+
 @end

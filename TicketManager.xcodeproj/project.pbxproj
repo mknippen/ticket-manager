@@ -40,30 +40,34 @@
 		FA03D3B5153F5F540065ECCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA03D3B3153F5F540065ECCF /* InfoPlist.strings */; };
 		FA03D3B8153F5F540065ECCF /* TicketManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03D3B7153F5F540065ECCF /* TicketManagerTests.m */; };
 		FA0F22E6153FD31A0085BCAE /* DataAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F22E5153FD31A0085BCAE /* DataAdder.m */; };
-		FA0F232C153FDA1C0085BCAE /* _Membership.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F22FD153FDA1C0085BCAE /* _Membership.m */; };
-		FA0F232D153FDA1C0085BCAE /* _Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F22FF153FDA1C0085BCAE /* _Movie.m */; };
-		FA0F232E153FDA1C0085BCAE /* _Post.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2301153FDA1C0085BCAE /* _Post.m */; };
-		FA0F232F153FDA1C0085BCAE /* _Review.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2303153FDA1C0085BCAE /* _Review.m */; };
-		FA0F2330153FDA1C0085BCAE /* _Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2305153FDA1C0085BCAE /* _Screen.m */; };
-		FA0F2331153FDA1C0085BCAE /* _Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2307153FDA1C0085BCAE /* _Shift.m */; };
-		FA0F2332153FDA1C0085BCAE /* _Showing.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2309153FDA1C0085BCAE /* _Showing.m */; };
-		FA0F2333153FDA1C0085BCAE /* _Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F230B153FDA1C0085BCAE /* _Staff.m */; };
-		FA0F2334153FDA1C0085BCAE /* _Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F230D153FDA1C0085BCAE /* _Theatre.m */; };
-		FA0F2335153FDA1C0085BCAE /* _Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F230F153FDA1C0085BCAE /* _Thread.m */; };
-		FA0F2336153FDA1C0085BCAE /* _Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2311153FDA1C0085BCAE /* _Topic.m */; };
-		FA0F2337153FDA1C0085BCAE /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2313153FDA1C0085BCAE /* _User.m */; };
-		FA0F2338153FDA1C0085BCAE /* Membership.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2315153FDA1C0085BCAE /* Membership.m */; };
-		FA0F2339153FDA1C0085BCAE /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2317153FDA1C0085BCAE /* Movie.m */; };
-		FA0F233A153FDA1C0085BCAE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2319153FDA1C0085BCAE /* Post.m */; };
-		FA0F233B153FDA1C0085BCAE /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F231B153FDA1C0085BCAE /* Review.m */; };
-		FA0F233C153FDA1C0085BCAE /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F231D153FDA1C0085BCAE /* Screen.m */; };
-		FA0F233D153FDA1C0085BCAE /* Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F231F153FDA1C0085BCAE /* Shift.m */; };
-		FA0F233E153FDA1C0085BCAE /* Showing.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2321153FDA1C0085BCAE /* Showing.m */; };
-		FA0F233F153FDA1C0085BCAE /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2323153FDA1C0085BCAE /* Staff.m */; };
-		FA0F2340153FDA1C0085BCAE /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2325153FDA1C0085BCAE /* Theatre.m */; };
-		FA0F2341153FDA1C0085BCAE /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2327153FDA1C0085BCAE /* Thread.m */; };
-		FA0F2342153FDA1C0085BCAE /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2329153FDA1C0085BCAE /* Topic.m */; };
-		FA0F2343153FDA1C0085BCAE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F232B153FDA1C0085BCAE /* User.m */; };
+		FA0F2399153FDE870085BCAE /* _Function.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F237E153FDE870085BCAE /* _Function.m */; };
+		FA0F239A153FDE870085BCAE /* _Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2380153FDE870085BCAE /* _Genre.m */; };
+		FA0F239B153FDE870085BCAE /* _Membership.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2382153FDE870085BCAE /* _Membership.m */; };
+		FA0F239C153FDE870085BCAE /* _Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2384153FDE870085BCAE /* _Movie.m */; };
+		FA0F239D153FDE870085BCAE /* _Post.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2386153FDE870085BCAE /* _Post.m */; };
+		FA0F239E153FDE870085BCAE /* _Review.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2388153FDE870085BCAE /* _Review.m */; };
+		FA0F239F153FDE870085BCAE /* _Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F238A153FDE870085BCAE /* _Screen.m */; };
+		FA0F23A0153FDE870085BCAE /* _Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F238C153FDE870085BCAE /* _Shift.m */; };
+		FA0F23A1153FDE870085BCAE /* _Showing.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F238E153FDE870085BCAE /* _Showing.m */; };
+		FA0F23A2153FDE870085BCAE /* _Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2390153FDE870085BCAE /* _Staff.m */; };
+		FA0F23A3153FDE870085BCAE /* _Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2392153FDE870085BCAE /* _Theatre.m */; };
+		FA0F23A4153FDE870085BCAE /* _Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2394153FDE870085BCAE /* _Thread.m */; };
+		FA0F23A5153FDE870085BCAE /* _Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2396153FDE870085BCAE /* _Topic.m */; };
+		FA0F23A6153FDE870085BCAE /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F2398153FDE870085BCAE /* _User.m */; };
+		FA0F23C3153FDEA00085BCAE /* Function.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23A8153FDEA00085BCAE /* Function.m */; };
+		FA0F23C4153FDEA00085BCAE /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23AA153FDEA00085BCAE /* Genre.m */; };
+		FA0F23C5153FDEA00085BCAE /* Membership.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23AC153FDEA00085BCAE /* Membership.m */; };
+		FA0F23C6153FDEA00085BCAE /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23AE153FDEA00085BCAE /* Movie.m */; };
+		FA0F23C7153FDEA00085BCAE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23B0153FDEA00085BCAE /* Post.m */; };
+		FA0F23C8153FDEA00085BCAE /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23B2153FDEA00085BCAE /* Review.m */; };
+		FA0F23C9153FDEA00085BCAE /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23B4153FDEA00085BCAE /* Screen.m */; };
+		FA0F23CA153FDEA00085BCAE /* Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23B6153FDEA00085BCAE /* Shift.m */; };
+		FA0F23CB153FDEA00085BCAE /* Showing.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23B8153FDEA00085BCAE /* Showing.m */; };
+		FA0F23CC153FDEA00085BCAE /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23BA153FDEA00085BCAE /* Staff.m */; };
+		FA0F23CD153FDEA00085BCAE /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23BC153FDEA00085BCAE /* Theatre.m */; };
+		FA0F23CE153FDEA00085BCAE /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23BE153FDEA00085BCAE /* Thread.m */; };
+		FA0F23CF153FDEA00085BCAE /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23C0153FDEA00085BCAE /* Topic.m */; };
+		FA0F23D0153FDEA00085BCAE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23C2153FDEA00085BCAE /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,54 +107,62 @@
 		FA03D3B7153F5F540065ECCF /* TicketManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketManagerTests.m; sourceTree = "<group>"; };
 		FA0F22E4153FD31A0085BCAE /* DataAdder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAdder.h; sourceTree = "<group>"; };
 		FA0F22E5153FD31A0085BCAE /* DataAdder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAdder.m; sourceTree = "<group>"; };
-		FA0F22FC153FDA1C0085BCAE /* _Membership.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Membership.h; path = Model/_Membership.h; sourceTree = "<group>"; };
-		FA0F22FD153FDA1C0085BCAE /* _Membership.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Membership.m; path = Model/_Membership.m; sourceTree = "<group>"; };
-		FA0F22FE153FDA1C0085BCAE /* _Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Movie.h; path = Model/_Movie.h; sourceTree = "<group>"; };
-		FA0F22FF153FDA1C0085BCAE /* _Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Movie.m; path = Model/_Movie.m; sourceTree = "<group>"; };
-		FA0F2300153FDA1C0085BCAE /* _Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Post.h; path = Model/_Post.h; sourceTree = "<group>"; };
-		FA0F2301153FDA1C0085BCAE /* _Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Post.m; path = Model/_Post.m; sourceTree = "<group>"; };
-		FA0F2302153FDA1C0085BCAE /* _Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Review.h; path = Model/_Review.h; sourceTree = "<group>"; };
-		FA0F2303153FDA1C0085BCAE /* _Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Review.m; path = Model/_Review.m; sourceTree = "<group>"; };
-		FA0F2304153FDA1C0085BCAE /* _Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Screen.h; path = Model/_Screen.h; sourceTree = "<group>"; };
-		FA0F2305153FDA1C0085BCAE /* _Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Screen.m; path = Model/_Screen.m; sourceTree = "<group>"; };
-		FA0F2306153FDA1C0085BCAE /* _Shift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Shift.h; path = Model/_Shift.h; sourceTree = "<group>"; };
-		FA0F2307153FDA1C0085BCAE /* _Shift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Shift.m; path = Model/_Shift.m; sourceTree = "<group>"; };
-		FA0F2308153FDA1C0085BCAE /* _Showing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Showing.h; path = Model/_Showing.h; sourceTree = "<group>"; };
-		FA0F2309153FDA1C0085BCAE /* _Showing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Showing.m; path = Model/_Showing.m; sourceTree = "<group>"; };
-		FA0F230A153FDA1C0085BCAE /* _Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Staff.h; path = Model/_Staff.h; sourceTree = "<group>"; };
-		FA0F230B153FDA1C0085BCAE /* _Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Staff.m; path = Model/_Staff.m; sourceTree = "<group>"; };
-		FA0F230C153FDA1C0085BCAE /* _Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Theatre.h; path = Model/_Theatre.h; sourceTree = "<group>"; };
-		FA0F230D153FDA1C0085BCAE /* _Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Theatre.m; path = Model/_Theatre.m; sourceTree = "<group>"; };
-		FA0F230E153FDA1C0085BCAE /* _Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Thread.h; path = Model/_Thread.h; sourceTree = "<group>"; };
-		FA0F230F153FDA1C0085BCAE /* _Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Thread.m; path = Model/_Thread.m; sourceTree = "<group>"; };
-		FA0F2310153FDA1C0085BCAE /* _Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Topic.h; path = Model/_Topic.h; sourceTree = "<group>"; };
-		FA0F2311153FDA1C0085BCAE /* _Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Topic.m; path = Model/_Topic.m; sourceTree = "<group>"; };
-		FA0F2312153FDA1C0085BCAE /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = Model/_User.h; sourceTree = "<group>"; };
-		FA0F2313153FDA1C0085BCAE /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = Model/_User.m; sourceTree = "<group>"; };
-		FA0F2314153FDA1C0085BCAE /* Membership.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Membership.h; path = Model/Membership.h; sourceTree = "<group>"; };
-		FA0F2315153FDA1C0085BCAE /* Membership.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Membership.m; path = Model/Membership.m; sourceTree = "<group>"; };
-		FA0F2316153FDA1C0085BCAE /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Model/Movie.h; sourceTree = "<group>"; };
-		FA0F2317153FDA1C0085BCAE /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Model/Movie.m; sourceTree = "<group>"; };
-		FA0F2318153FDA1C0085BCAE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Model/Post.h; sourceTree = "<group>"; };
-		FA0F2319153FDA1C0085BCAE /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Model/Post.m; sourceTree = "<group>"; };
-		FA0F231A153FDA1C0085BCAE /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Review.h; path = Model/Review.h; sourceTree = "<group>"; };
-		FA0F231B153FDA1C0085BCAE /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = Model/Review.m; sourceTree = "<group>"; };
-		FA0F231C153FDA1C0085BCAE /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Screen.h; path = Model/Screen.h; sourceTree = "<group>"; };
-		FA0F231D153FDA1C0085BCAE /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Screen.m; path = Model/Screen.m; sourceTree = "<group>"; };
-		FA0F231E153FDA1C0085BCAE /* Shift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shift.h; path = Model/Shift.h; sourceTree = "<group>"; };
-		FA0F231F153FDA1C0085BCAE /* Shift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shift.m; path = Model/Shift.m; sourceTree = "<group>"; };
-		FA0F2320153FDA1C0085BCAE /* Showing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Showing.h; path = Model/Showing.h; sourceTree = "<group>"; };
-		FA0F2321153FDA1C0085BCAE /* Showing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Showing.m; path = Model/Showing.m; sourceTree = "<group>"; };
-		FA0F2322153FDA1C0085BCAE /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Staff.h; path = Model/Staff.h; sourceTree = "<group>"; };
-		FA0F2323153FDA1C0085BCAE /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Staff.m; path = Model/Staff.m; sourceTree = "<group>"; };
-		FA0F2324153FDA1C0085BCAE /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Theatre.h; path = Model/Theatre.h; sourceTree = "<group>"; };
-		FA0F2325153FDA1C0085BCAE /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Theatre.m; path = Model/Theatre.m; sourceTree = "<group>"; };
-		FA0F2326153FDA1C0085BCAE /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thread.h; path = Model/Thread.h; sourceTree = "<group>"; };
-		FA0F2327153FDA1C0085BCAE /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thread.m; path = Model/Thread.m; sourceTree = "<group>"; };
-		FA0F2328153FDA1C0085BCAE /* Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Topic.h; path = Model/Topic.h; sourceTree = "<group>"; };
-		FA0F2329153FDA1C0085BCAE /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Topic.m; path = Model/Topic.m; sourceTree = "<group>"; };
-		FA0F232A153FDA1C0085BCAE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
-		FA0F232B153FDA1C0085BCAE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		FA0F237D153FDE870085BCAE /* _Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Function.h; path = Model/_Function.h; sourceTree = "<group>"; };
+		FA0F237E153FDE870085BCAE /* _Function.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Function.m; path = Model/_Function.m; sourceTree = "<group>"; };
+		FA0F237F153FDE870085BCAE /* _Genre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Genre.h; path = Model/_Genre.h; sourceTree = "<group>"; };
+		FA0F2380153FDE870085BCAE /* _Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Genre.m; path = Model/_Genre.m; sourceTree = "<group>"; };
+		FA0F2381153FDE870085BCAE /* _Membership.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Membership.h; path = Model/_Membership.h; sourceTree = "<group>"; };
+		FA0F2382153FDE870085BCAE /* _Membership.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Membership.m; path = Model/_Membership.m; sourceTree = "<group>"; };
+		FA0F2383153FDE870085BCAE /* _Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Movie.h; path = Model/_Movie.h; sourceTree = "<group>"; };
+		FA0F2384153FDE870085BCAE /* _Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Movie.m; path = Model/_Movie.m; sourceTree = "<group>"; };
+		FA0F2385153FDE870085BCAE /* _Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Post.h; path = Model/_Post.h; sourceTree = "<group>"; };
+		FA0F2386153FDE870085BCAE /* _Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Post.m; path = Model/_Post.m; sourceTree = "<group>"; };
+		FA0F2387153FDE870085BCAE /* _Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Review.h; path = Model/_Review.h; sourceTree = "<group>"; };
+		FA0F2388153FDE870085BCAE /* _Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Review.m; path = Model/_Review.m; sourceTree = "<group>"; };
+		FA0F2389153FDE870085BCAE /* _Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Screen.h; path = Model/_Screen.h; sourceTree = "<group>"; };
+		FA0F238A153FDE870085BCAE /* _Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Screen.m; path = Model/_Screen.m; sourceTree = "<group>"; };
+		FA0F238B153FDE870085BCAE /* _Shift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Shift.h; path = Model/_Shift.h; sourceTree = "<group>"; };
+		FA0F238C153FDE870085BCAE /* _Shift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Shift.m; path = Model/_Shift.m; sourceTree = "<group>"; };
+		FA0F238D153FDE870085BCAE /* _Showing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Showing.h; path = Model/_Showing.h; sourceTree = "<group>"; };
+		FA0F238E153FDE870085BCAE /* _Showing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Showing.m; path = Model/_Showing.m; sourceTree = "<group>"; };
+		FA0F238F153FDE870085BCAE /* _Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Staff.h; path = Model/_Staff.h; sourceTree = "<group>"; };
+		FA0F2390153FDE870085BCAE /* _Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Staff.m; path = Model/_Staff.m; sourceTree = "<group>"; };
+		FA0F2391153FDE870085BCAE /* _Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Theatre.h; path = Model/_Theatre.h; sourceTree = "<group>"; };
+		FA0F2392153FDE870085BCAE /* _Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Theatre.m; path = Model/_Theatre.m; sourceTree = "<group>"; };
+		FA0F2393153FDE870085BCAE /* _Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Thread.h; path = Model/_Thread.h; sourceTree = "<group>"; };
+		FA0F2394153FDE870085BCAE /* _Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Thread.m; path = Model/_Thread.m; sourceTree = "<group>"; };
+		FA0F2395153FDE870085BCAE /* _Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _Topic.h; path = Model/_Topic.h; sourceTree = "<group>"; };
+		FA0F2396153FDE870085BCAE /* _Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _Topic.m; path = Model/_Topic.m; sourceTree = "<group>"; };
+		FA0F2397153FDE870085BCAE /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = Model/_User.h; sourceTree = "<group>"; };
+		FA0F2398153FDE870085BCAE /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = Model/_User.m; sourceTree = "<group>"; };
+		FA0F23A7153FDEA00085BCAE /* Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Function.h; path = Model/Function.h; sourceTree = "<group>"; };
+		FA0F23A8153FDEA00085BCAE /* Function.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Function.m; path = Model/Function.m; sourceTree = "<group>"; };
+		FA0F23A9153FDEA00085BCAE /* Genre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Genre.h; path = Model/Genre.h; sourceTree = "<group>"; };
+		FA0F23AA153FDEA00085BCAE /* Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Genre.m; path = Model/Genre.m; sourceTree = "<group>"; };
+		FA0F23AB153FDEA00085BCAE /* Membership.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Membership.h; path = Model/Membership.h; sourceTree = "<group>"; };
+		FA0F23AC153FDEA00085BCAE /* Membership.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Membership.m; path = Model/Membership.m; sourceTree = "<group>"; };
+		FA0F23AD153FDEA00085BCAE /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Model/Movie.h; sourceTree = "<group>"; };
+		FA0F23AE153FDEA00085BCAE /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Model/Movie.m; sourceTree = "<group>"; };
+		FA0F23AF153FDEA00085BCAE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Model/Post.h; sourceTree = "<group>"; };
+		FA0F23B0153FDEA00085BCAE /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Model/Post.m; sourceTree = "<group>"; };
+		FA0F23B1153FDEA00085BCAE /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Review.h; path = Model/Review.h; sourceTree = "<group>"; };
+		FA0F23B2153FDEA00085BCAE /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = Model/Review.m; sourceTree = "<group>"; };
+		FA0F23B3153FDEA00085BCAE /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Screen.h; path = Model/Screen.h; sourceTree = "<group>"; };
+		FA0F23B4153FDEA00085BCAE /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Screen.m; path = Model/Screen.m; sourceTree = "<group>"; };
+		FA0F23B5153FDEA00085BCAE /* Shift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shift.h; path = Model/Shift.h; sourceTree = "<group>"; };
+		FA0F23B6153FDEA00085BCAE /* Shift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shift.m; path = Model/Shift.m; sourceTree = "<group>"; };
+		FA0F23B7153FDEA00085BCAE /* Showing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Showing.h; path = Model/Showing.h; sourceTree = "<group>"; };
+		FA0F23B8153FDEA00085BCAE /* Showing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Showing.m; path = Model/Showing.m; sourceTree = "<group>"; };
+		FA0F23B9153FDEA00085BCAE /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Staff.h; path = Model/Staff.h; sourceTree = "<group>"; };
+		FA0F23BA153FDEA00085BCAE /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Staff.m; path = Model/Staff.m; sourceTree = "<group>"; };
+		FA0F23BB153FDEA00085BCAE /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Theatre.h; path = Model/Theatre.h; sourceTree = "<group>"; };
+		FA0F23BC153FDEA00085BCAE /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Theatre.m; path = Model/Theatre.m; sourceTree = "<group>"; };
+		FA0F23BD153FDEA00085BCAE /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Thread.h; path = Model/Thread.h; sourceTree = "<group>"; };
+		FA0F23BE153FDEA00085BCAE /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Thread.m; path = Model/Thread.m; sourceTree = "<group>"; };
+		FA0F23BF153FDEA00085BCAE /* Topic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Topic.h; path = Model/Topic.h; sourceTree = "<group>"; };
+		FA0F23C0153FDEA00085BCAE /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Topic.m; path = Model/Topic.m; sourceTree = "<group>"; };
+		FA0F23C1153FDEA00085BCAE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		FA0F23C2153FDEA00085BCAE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,30 +276,34 @@
 			isa = PBXGroup;
 			children = (
 				FA0F2344153FDA280085BCAE /* Machine */,
-				FA0F2314153FDA1C0085BCAE /* Membership.h */,
-				FA0F2315153FDA1C0085BCAE /* Membership.m */,
-				FA0F2316153FDA1C0085BCAE /* Movie.h */,
-				FA0F2317153FDA1C0085BCAE /* Movie.m */,
-				FA0F2318153FDA1C0085BCAE /* Post.h */,
-				FA0F2319153FDA1C0085BCAE /* Post.m */,
-				FA0F231A153FDA1C0085BCAE /* Review.h */,
-				FA0F231B153FDA1C0085BCAE /* Review.m */,
-				FA0F231C153FDA1C0085BCAE /* Screen.h */,
-				FA0F231D153FDA1C0085BCAE /* Screen.m */,
-				FA0F231E153FDA1C0085BCAE /* Shift.h */,
-				FA0F231F153FDA1C0085BCAE /* Shift.m */,
-				FA0F2320153FDA1C0085BCAE /* Showing.h */,
-				FA0F2321153FDA1C0085BCAE /* Showing.m */,
-				FA0F2322153FDA1C0085BCAE /* Staff.h */,
-				FA0F2323153FDA1C0085BCAE /* Staff.m */,
-				FA0F2324153FDA1C0085BCAE /* Theatre.h */,
-				FA0F2325153FDA1C0085BCAE /* Theatre.m */,
-				FA0F2326153FDA1C0085BCAE /* Thread.h */,
-				FA0F2327153FDA1C0085BCAE /* Thread.m */,
-				FA0F2328153FDA1C0085BCAE /* Topic.h */,
-				FA0F2329153FDA1C0085BCAE /* Topic.m */,
-				FA0F232A153FDA1C0085BCAE /* User.h */,
-				FA0F232B153FDA1C0085BCAE /* User.m */,
+				FA0F23A7153FDEA00085BCAE /* Function.h */,
+				FA0F23A8153FDEA00085BCAE /* Function.m */,
+				FA0F23A9153FDEA00085BCAE /* Genre.h */,
+				FA0F23AA153FDEA00085BCAE /* Genre.m */,
+				FA0F23AB153FDEA00085BCAE /* Membership.h */,
+				FA0F23AC153FDEA00085BCAE /* Membership.m */,
+				FA0F23AD153FDEA00085BCAE /* Movie.h */,
+				FA0F23AE153FDEA00085BCAE /* Movie.m */,
+				FA0F23AF153FDEA00085BCAE /* Post.h */,
+				FA0F23B0153FDEA00085BCAE /* Post.m */,
+				FA0F23B1153FDEA00085BCAE /* Review.h */,
+				FA0F23B2153FDEA00085BCAE /* Review.m */,
+				FA0F23B3153FDEA00085BCAE /* Screen.h */,
+				FA0F23B4153FDEA00085BCAE /* Screen.m */,
+				FA0F23B5153FDEA00085BCAE /* Shift.h */,
+				FA0F23B6153FDEA00085BCAE /* Shift.m */,
+				FA0F23B7153FDEA00085BCAE /* Showing.h */,
+				FA0F23B8153FDEA00085BCAE /* Showing.m */,
+				FA0F23B9153FDEA00085BCAE /* Staff.h */,
+				FA0F23BA153FDEA00085BCAE /* Staff.m */,
+				FA0F23BB153FDEA00085BCAE /* Theatre.h */,
+				FA0F23BC153FDEA00085BCAE /* Theatre.m */,
+				FA0F23BD153FDEA00085BCAE /* Thread.h */,
+				FA0F23BE153FDEA00085BCAE /* Thread.m */,
+				FA0F23BF153FDEA00085BCAE /* Topic.h */,
+				FA0F23C0153FDEA00085BCAE /* Topic.m */,
+				FA0F23C1153FDEA00085BCAE /* User.h */,
+				FA0F23C2153FDEA00085BCAE /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -295,30 +311,34 @@
 		FA0F2344153FDA280085BCAE /* Machine */ = {
 			isa = PBXGroup;
 			children = (
-				FA0F22FC153FDA1C0085BCAE /* _Membership.h */,
-				FA0F22FD153FDA1C0085BCAE /* _Membership.m */,
-				FA0F22FE153FDA1C0085BCAE /* _Movie.h */,
-				FA0F22FF153FDA1C0085BCAE /* _Movie.m */,
-				FA0F2300153FDA1C0085BCAE /* _Post.h */,
-				FA0F2301153FDA1C0085BCAE /* _Post.m */,
-				FA0F2302153FDA1C0085BCAE /* _Review.h */,
-				FA0F2303153FDA1C0085BCAE /* _Review.m */,
-				FA0F2304153FDA1C0085BCAE /* _Screen.h */,
-				FA0F2305153FDA1C0085BCAE /* _Screen.m */,
-				FA0F2306153FDA1C0085BCAE /* _Shift.h */,
-				FA0F2307153FDA1C0085BCAE /* _Shift.m */,
-				FA0F2308153FDA1C0085BCAE /* _Showing.h */,
-				FA0F2309153FDA1C0085BCAE /* _Showing.m */,
-				FA0F230A153FDA1C0085BCAE /* _Staff.h */,
-				FA0F230B153FDA1C0085BCAE /* _Staff.m */,
-				FA0F230C153FDA1C0085BCAE /* _Theatre.h */,
-				FA0F230D153FDA1C0085BCAE /* _Theatre.m */,
-				FA0F230E153FDA1C0085BCAE /* _Thread.h */,
-				FA0F230F153FDA1C0085BCAE /* _Thread.m */,
-				FA0F2310153FDA1C0085BCAE /* _Topic.h */,
-				FA0F2311153FDA1C0085BCAE /* _Topic.m */,
-				FA0F2312153FDA1C0085BCAE /* _User.h */,
-				FA0F2313153FDA1C0085BCAE /* _User.m */,
+				FA0F237D153FDE870085BCAE /* _Function.h */,
+				FA0F237E153FDE870085BCAE /* _Function.m */,
+				FA0F237F153FDE870085BCAE /* _Genre.h */,
+				FA0F2380153FDE870085BCAE /* _Genre.m */,
+				FA0F2381153FDE870085BCAE /* _Membership.h */,
+				FA0F2382153FDE870085BCAE /* _Membership.m */,
+				FA0F2383153FDE870085BCAE /* _Movie.h */,
+				FA0F2384153FDE870085BCAE /* _Movie.m */,
+				FA0F2385153FDE870085BCAE /* _Post.h */,
+				FA0F2386153FDE870085BCAE /* _Post.m */,
+				FA0F2387153FDE870085BCAE /* _Review.h */,
+				FA0F2388153FDE870085BCAE /* _Review.m */,
+				FA0F2389153FDE870085BCAE /* _Screen.h */,
+				FA0F238A153FDE870085BCAE /* _Screen.m */,
+				FA0F238B153FDE870085BCAE /* _Shift.h */,
+				FA0F238C153FDE870085BCAE /* _Shift.m */,
+				FA0F238D153FDE870085BCAE /* _Showing.h */,
+				FA0F238E153FDE870085BCAE /* _Showing.m */,
+				FA0F238F153FDE870085BCAE /* _Staff.h */,
+				FA0F2390153FDE870085BCAE /* _Staff.m */,
+				FA0F2391153FDE870085BCAE /* _Theatre.h */,
+				FA0F2392153FDE870085BCAE /* _Theatre.m */,
+				FA0F2393153FDE870085BCAE /* _Thread.h */,
+				FA0F2394153FDE870085BCAE /* _Thread.m */,
+				FA0F2395153FDE870085BCAE /* _Topic.h */,
+				FA0F2396153FDE870085BCAE /* _Topic.m */,
+				FA0F2397153FDE870085BCAE /* _User.h */,
+				FA0F2398153FDE870085BCAE /* _User.m */,
 			);
 			name = Machine;
 			sourceTree = "<group>";
@@ -451,30 +471,34 @@
 				FA03D399153F5F540065ECCF /* MasterViewController.m in Sources */,
 				FA03D39C153F5F540065ECCF /* DetailViewController.m in Sources */,
 				FA0F22E6153FD31A0085BCAE /* DataAdder.m in Sources */,
-				FA0F232C153FDA1C0085BCAE /* _Membership.m in Sources */,
-				FA0F232D153FDA1C0085BCAE /* _Movie.m in Sources */,
-				FA0F232E153FDA1C0085BCAE /* _Post.m in Sources */,
-				FA0F232F153FDA1C0085BCAE /* _Review.m in Sources */,
-				FA0F2330153FDA1C0085BCAE /* _Screen.m in Sources */,
-				FA0F2331153FDA1C0085BCAE /* _Shift.m in Sources */,
-				FA0F2332153FDA1C0085BCAE /* _Showing.m in Sources */,
-				FA0F2333153FDA1C0085BCAE /* _Staff.m in Sources */,
-				FA0F2334153FDA1C0085BCAE /* _Theatre.m in Sources */,
-				FA0F2335153FDA1C0085BCAE /* _Thread.m in Sources */,
-				FA0F2336153FDA1C0085BCAE /* _Topic.m in Sources */,
-				FA0F2337153FDA1C0085BCAE /* _User.m in Sources */,
-				FA0F2338153FDA1C0085BCAE /* Membership.m in Sources */,
-				FA0F2339153FDA1C0085BCAE /* Movie.m in Sources */,
-				FA0F233A153FDA1C0085BCAE /* Post.m in Sources */,
-				FA0F233B153FDA1C0085BCAE /* Review.m in Sources */,
-				FA0F233C153FDA1C0085BCAE /* Screen.m in Sources */,
-				FA0F233D153FDA1C0085BCAE /* Shift.m in Sources */,
-				FA0F233E153FDA1C0085BCAE /* Showing.m in Sources */,
-				FA0F233F153FDA1C0085BCAE /* Staff.m in Sources */,
-				FA0F2340153FDA1C0085BCAE /* Theatre.m in Sources */,
-				FA0F2341153FDA1C0085BCAE /* Thread.m in Sources */,
-				FA0F2342153FDA1C0085BCAE /* Topic.m in Sources */,
-				FA0F2343153FDA1C0085BCAE /* User.m in Sources */,
+				FA0F2399153FDE870085BCAE /* _Function.m in Sources */,
+				FA0F239A153FDE870085BCAE /* _Genre.m in Sources */,
+				FA0F239B153FDE870085BCAE /* _Membership.m in Sources */,
+				FA0F239C153FDE870085BCAE /* _Movie.m in Sources */,
+				FA0F239D153FDE870085BCAE /* _Post.m in Sources */,
+				FA0F239E153FDE870085BCAE /* _Review.m in Sources */,
+				FA0F239F153FDE870085BCAE /* _Screen.m in Sources */,
+				FA0F23A0153FDE870085BCAE /* _Shift.m in Sources */,
+				FA0F23A1153FDE870085BCAE /* _Showing.m in Sources */,
+				FA0F23A2153FDE870085BCAE /* _Staff.m in Sources */,
+				FA0F23A3153FDE870085BCAE /* _Theatre.m in Sources */,
+				FA0F23A4153FDE870085BCAE /* _Thread.m in Sources */,
+				FA0F23A5153FDE870085BCAE /* _Topic.m in Sources */,
+				FA0F23A6153FDE870085BCAE /* _User.m in Sources */,
+				FA0F23C3153FDEA00085BCAE /* Function.m in Sources */,
+				FA0F23C4153FDEA00085BCAE /* Genre.m in Sources */,
+				FA0F23C5153FDEA00085BCAE /* Membership.m in Sources */,
+				FA0F23C6153FDEA00085BCAE /* Movie.m in Sources */,
+				FA0F23C7153FDEA00085BCAE /* Post.m in Sources */,
+				FA0F23C8153FDEA00085BCAE /* Review.m in Sources */,
+				FA0F23C9153FDEA00085BCAE /* Screen.m in Sources */,
+				FA0F23CA153FDEA00085BCAE /* Shift.m in Sources */,
+				FA0F23CB153FDEA00085BCAE /* Showing.m in Sources */,
+				FA0F23CC153FDEA00085BCAE /* Staff.m in Sources */,
+				FA0F23CD153FDEA00085BCAE /* Theatre.m in Sources */,
+				FA0F23CE153FDEA00085BCAE /* Thread.m in Sources */,
+				FA0F23CF153FDEA00085BCAE /* Topic.m in Sources */,
+				FA0F23D0153FDEA00085BCAE /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

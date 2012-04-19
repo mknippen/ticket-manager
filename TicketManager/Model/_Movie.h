@@ -21,7 +21,7 @@ extern const struct MovieRelationships {
 extern const struct MovieFetchedProperties {
 } MovieFetchedProperties;
 
-@class NSManagedObject;
+@class Genre;
 @class Review;
 @class Showing;
 
@@ -116,8 +116,8 @@ extern const struct MovieFetchedProperties {
 
 - (void)addGenres:(NSSet*)value_;
 - (void)removeGenres:(NSSet*)value_;
-- (void)addGenresObject:(NSManagedObject*)value_;
-- (void)removeGenresObject:(NSManagedObject*)value_;
+- (void)addGenresObject:(Genre*)value_;
+- (void)removeGenresObject:(Genre*)value_;
 
 - (void)addShowings:(NSSet*)value_;
 - (void)removeShowings:(NSSet*)value_;

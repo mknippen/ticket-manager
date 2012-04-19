@@ -18,7 +18,7 @@ extern const struct StaffRelationships {
 extern const struct StaffFetchedProperties {
 } StaffFetchedProperties;
 
-@class NSManagedObject;
+@class Function;
 @class Shift;
 @class Theatre;
 
@@ -58,7 +58,7 @@ extern const struct StaffFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSManagedObject* function;
+@property (nonatomic, strong) Function* function;
 
 //- (BOOL)validateFunction:(id*)value_ error:(NSError**)error_;
 
@@ -110,8 +110,8 @@ extern const struct StaffFetchedProperties {
 
 
 
-- (NSManagedObject*)primitiveFunction;
-- (void)setPrimitiveFunction:(NSManagedObject*)value;
+- (Function*)primitiveFunction;
+- (void)setPrimitiveFunction:(Function*)value;
 
 
 
