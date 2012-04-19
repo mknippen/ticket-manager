@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Function" syncable="YES">
+        <attribute name="duties" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="staff" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Staff" inverseName="function" inverseEntity="Staff" syncable="YES"/>
+    </entity>
+    <entity name="Genre" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Membership" representedClassName="Membership" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pointsNeeded" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="membership" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Movie" representedClassName="Movie" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="directors" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stars" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Genre" syncable="YES"/>
+        <relationship name="reviews" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Review" inverseName="movie" inverseEntity="Review" syncable="YES"/>
+        <relationship name="showings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showing" inverseName="movie" inverseEntity="Showing" syncable="YES"/>
+    </entity>
+    <entity name="Post" representedClassName="Post" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="thread" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Thread" inverseName="posts" inverseEntity="Thread" syncable="YES"/>
+        <relationship name="writer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Review" representedClassName="Review" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="reviews" inverseEntity="Movie" syncable="YES"/>
+        <relationship name="theatre" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" inverseName="reviews" inverseEntity="Theatre" syncable="YES"/>
+        <relationship name="usersDisliked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="reviewsDisliked" inverseEntity="User" syncable="YES"/>
+        <relationship name="usersLiked" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviewsLiked" inverseEntity="User" syncable="YES"/>
+        <relationship name="writer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviewsWritten" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Screen" representedClassName="Screen" syncable="YES">
+        <attribute name="capacity" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="showings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showing" inverseName="screen" inverseEntity="Showing" syncable="YES"/>
+        <relationship name="theatre" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" inverseName="screens" inverseEntity="Theatre" syncable="YES"/>
+    </entity>
+    <entity name="Shift" representedClassName="Shift" syncable="YES">
+        <relationship name="function" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Function" syncable="YES"/>
+        <relationship name="staff" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Staff" inverseName="shifts" inverseEntity="Staff" syncable="YES"/>
+    </entity>
+    <entity name="Showing" representedClassName="Showing">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+        <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="showings" inverseEntity="Movie" syncable="YES"/>
+        <relationship name="screen" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Screen" inverseName="showings" inverseEntity="Screen" syncable="YES"/>
+        <relationship name="usersAttending" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="showingsSeen" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Staff" representedClassName="Staff" parentEntity="User" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ssn" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="function" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Function" inverseName="staff" inverseEntity="Function" syncable="YES"/>
+        <relationship name="shifts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shift" inverseName="staff" inverseEntity="Shift" syncable="YES"/>
+        <relationship name="theatre" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" inverseName="staff" inverseEntity="Theatre" syncable="YES"/>
+    </entity>
+    <entity name="Theatre" representedClassName="Theatre" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="reviews" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Review" inverseName="theatre" inverseEntity="Review" syncable="YES"/>
+        <relationship name="screens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Screen" inverseName="theatre" inverseEntity="Screen" syncable="YES"/>
+        <relationship name="staff" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Staff" inverseName="theatre" inverseEntity="Staff" syncable="YES"/>
+    </entity>
+    <entity name="Thread" representedClassName="Thread" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="thread" inverseEntity="Post" syncable="YES"/>
+        <relationship name="theatre" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" syncable="YES"/>
+        <relationship name="topic" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="threads" inverseEntity="Topic" syncable="YES"/>
+        <relationship name="userStarted" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Topic" representedClassName="Topic" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="threads" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Thread" inverseName="topic" inverseEntity="Thread" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="availableCreditPoints" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="ccExpiration" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="ccNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ccType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalCreditPoints" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="membership" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Membership" inverseName="users" inverseEntity="Membership" syncable="YES"/>
+        <relationship name="reviewsDisliked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="usersDisliked" inverseEntity="Review" syncable="YES"/>
+        <relationship name="reviewsLiked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="usersLiked" inverseEntity="Review" syncable="YES"/>
+        <relationship name="reviewsWritten" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="writer" inverseEntity="Review" syncable="YES"/>
+        <relationship name="showingsSeen" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showing" inverseName="usersAttending" inverseEntity="Showing" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Function" positionX="-632" positionY="18" width="128" height="105"/>
+        <element name="Genre" positionX="-641" positionY="-486" width="128" height="75"/>
+        <element name="Membership" positionX="-902" positionY="-477" width="128" height="105"/>
+        <element name="Movie" positionX="-425" positionY="-531" width="128" height="165"/>
+        <element name="Post" positionX="9" positionY="18" width="128" height="120"/>
+        <element name="Review" positionX="-675" positionY="-387" width="128" height="150"/>
+        <element name="Screen" positionX="99" positionY="-378" width="128" height="105"/>
+        <element name="Shift" positionX="-722" positionY="225" width="128" height="75"/>
+        <element name="Showing" positionX="-135" positionY="-450" width="128" height="120"/>
+        <element name="Staff" positionX="-794" positionY="54" width="128" height="120"/>
+        <element name="Theatre" positionX="-299" positionY="-270" width="128" height="135"/>
+        <element name="Thread" positionX="-198" positionY="-72" width="128" height="165"/>
+        <element name="Topic" positionX="-45" positionY="-135" width="128" height="90"/>
+        <element name="User" positionX="-891" positionY="-297" width="128" height="285"/>
+    </elements>
+</model>
