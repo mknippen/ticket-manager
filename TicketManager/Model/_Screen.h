@@ -47,8 +47,12 @@ extern const struct ScreenFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSString* id;
+@property (nonatomic, strong) NSNumber* id;
 
+
+@property int32_t idValue;
+- (int32_t)idValue;
+- (void)setIdValue:(int32_t)value_;
 
 //- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
 
@@ -94,8 +98,11 @@ extern const struct ScreenFetchedProperties {
 
 
 
-- (NSString*)primitiveId;
-- (void)setPrimitiveId:(NSString*)value;
+- (NSNumber*)primitiveId;
+- (void)setPrimitiveId:(NSNumber*)value;
+
+- (int32_t)primitiveIdValue;
+- (void)setPrimitiveIdValue:(int32_t)value_;
 
 
 

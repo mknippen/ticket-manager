@@ -93,7 +93,62 @@
 }
 
 + (void) populateDummyData {
+    AppDelegate *ad = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
+    Theatre *theatre1 = [Theatre insertInManagedObjectContext:ad.managedObjectContext];
+    theatre1.name = @"Knippen Theatres";
+    theatre1.address = @"123 Fake St.";
+    
+    Screen *screen1 = [Screen insertInManagedObjectContext:ad.managedObjectContext];
+    screen1.id = [NSNumber numberWithInt:0];
+    screen1.theatre = theatre1;
+    screen1.capacity = [NSNumber numberWithInt:400];
+    Screen *screen2 = [Screen insertInManagedObjectContext:ad.managedObjectContext];
+    screen2.id = [NSNumber numberWithInt:1];
+    screen2.theatre = theatre1;
+    screen2.capacity = [NSNumber numberWithInt:400];
+    
+    Movie *movie1 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
+    movie1.name = @"The Avengers";
+    movie1.desc = @"All of the best superheroes getting together.";
+    [movie1 addGenresObject:[Genre adventureGenre]];
+    Movie *movie2 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
+    movie2.name = @"The Hunger Games";
+    movie2.desc = @"Teens killing each other. Blockbuster.";
+    [movie2 addGenresObject:[Genre adventureGenre]];
+    Movie *movie3 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
+    movie3.name = @"Titanic 3D";
+    movie3.desc = @"10 Year old movie, now with glasses.";
+    [movie3 addGenresObject:[Genre loveGenre]];
+    [movie3 addGenresObject:[Genre dramaGenre]];
+    Movie *movie4 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
+    movie4.name = @"21 Jump Street";
+    movie4.desc = @"Police and Drugs. 'Nuff said.";
+    [movie4 addGenresObject:[Genre comedyGenre]];
+
+    Showing *s1 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
+    s1.timeStamp = [NSDate date];
+    s1.movie = movie1;
+    s1.screen = screen2;
+    Showing *s2 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
+    s2.timeStamp = [NSDate date];
+    s2.movie = movie1;
+    s2.screen = screen1;
+    Showing *s3 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
+    s3.timeStamp = [NSDate date];
+    s3.movie = movie2;
+    s3.screen = screen1;
+    Showing *s4 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
+    s4.timeStamp = [NSDate date];
+    s4.movie = movie3;
+    s4.screen = screen1;
+    Showing *s5 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
+    s5.timeStamp = [NSDate date];
+    s5.movie = movie4;
+    s5.screen = screen2;
+    
+    [ad.managedObjectContext save:nil];
+                     
 }
 
 
