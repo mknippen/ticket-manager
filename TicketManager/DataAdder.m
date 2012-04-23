@@ -88,7 +88,6 @@
     mem.name = @"Platnium";
     mem.pointsNeeded = [NSNumber numberWithInt:25000];
     
-    
     [ad.managedObjectContext save:nil];
 }
 
@@ -144,7 +143,7 @@
     s4.screen = screen1;
     Showing *s5 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
     s5.timeStamp = [NSDate date];
-    s5.movie = movie4;
+    s5.movie = movie1;
     s5.screen = screen2;
     
     [ad.managedObjectContext save:nil];

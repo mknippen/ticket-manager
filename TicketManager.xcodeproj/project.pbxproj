@@ -68,6 +68,7 @@
 		FA0F23CE153FDEA00085BCAE /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23BE153FDEA00085BCAE /* Thread.m */; };
 		FA0F23CF153FDEA00085BCAE /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23C0153FDEA00085BCAE /* Topic.m */; };
 		FA0F23D0153FDEA00085BCAE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23C2153FDEA00085BCAE /* User.m */; };
+		FA66832E1544BD4F0053B6A4 /* ObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,8 @@
 		FA0F23C0153FDEA00085BCAE /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Topic.m; path = Model/Topic.m; sourceTree = "<group>"; };
 		FA0F23C1153FDEA00085BCAE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
 		FA0F23C2153FDEA00085BCAE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		FA66832C1544BD4F0053B6A4 /* ObjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectListViewController.h; sourceTree = "<group>"; };
+		FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,13 +232,15 @@
 				FA03D392153F5F540065ECCF /* AppDelegate.m */,
 				FA03D397153F5F540065ECCF /* MasterViewController.h */,
 				FA03D398153F5F540065ECCF /* MasterViewController.m */,
+				FA03D39D153F5F540065ECCF /* MasterViewController.xib */,
 				FA03D39A153F5F540065ECCF /* DetailViewController.h */,
 				FA03D39B153F5F540065ECCF /* DetailViewController.m */,
-				FA03D39D153F5F540065ECCF /* MasterViewController.xib */,
 				FA03D3A0153F5F540065ECCF /* DetailViewController.xib */,
 				FA03D394153F5F540065ECCF /* TicketManager.xcdatamodeld */,
 				FA0F22E4153FD31A0085BCAE /* DataAdder.h */,
 				FA0F22E5153FD31A0085BCAE /* DataAdder.m */,
+				FA66832C1544BD4F0053B6A4 /* ObjectListViewController.h */,
+				FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */,
 				FA0F22FB153FDA0E0085BCAE /* Model */,
 				FA03D389153F5F540065ECCF /* Supporting Files */,
 			);
@@ -499,6 +504,7 @@
 				FA0F23CE153FDEA00085BCAE /* Thread.m in Sources */,
 				FA0F23CF153FDEA00085BCAE /* Topic.m in Sources */,
 				FA0F23D0153FDEA00085BCAE /* User.m in Sources */,
+				FA66832E1544BD4F0053B6A4 /* ObjectListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

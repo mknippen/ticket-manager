@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
+#import "ObjectListViewController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -24,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = @"Menu";
         self.clearsSelectionOnViewWillAppear = NO;
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
     }
@@ -107,8 +108,34 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    self.detailViewController.detailItem = object;
+//    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+//    self.detailViewController.detailItem = object;
+    
+    ObjectListViewController *olvc = [[ObjectListViewController alloc] init];
+    
+    switch (indexPath.row) {
+        case 0:
+            olvc.objectType = @"Theatre";
+            break;
+        case 1:
+            olvc.objectType = @"Movie";
+            break;
+        case 2:
+            break;
+        case 3:
+            olvc.objectType = @"Topic";
+            break;
+        case 4:
+            olvc.objectType = @"Staff";
+            break;
+        default:
+            break;
+    }  
+    
+    if (indexPath.row != 2) {
+        [self.navigationController pushViewController:olvc animated:YES];
+    }
+
 }
 
 #pragma mark - Fetched results controller
@@ -195,12 +222,11 @@
 //    }
 //}
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    [self.tableView endUpdates];
-}
+//- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+//{
+//    [self.tableView endUpdates];
+//}
 
-/*
 // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
  
  - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
@@ -208,7 +234,7 @@
     // In the simplest, most efficient, case, reload the table view.
     [self.tableView reloadData];
 }
- */
+
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
