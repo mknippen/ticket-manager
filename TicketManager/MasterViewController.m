@@ -10,6 +10,7 @@
 
 #import "DetailViewController.h"
 #import "ObjectListViewController.h"
+#import "LoginViewController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -112,7 +113,8 @@
 //    self.detailViewController.detailItem = object;
     
     ObjectListViewController *olvc = [[ObjectListViewController alloc] init];
-    
+    LoginViewController *lvc;
+
     switch (indexPath.row) {
         case 0:
             olvc.objectType = @"Theatre";
@@ -120,7 +122,9 @@
         case 1:
             olvc.objectType = @"Movie";
             break;
-        case 2:
+        case 2:            
+            lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+            self.splitViewController.viewControllers = [NSArray arrayWithObjects:self.navigationController, lvc, nil];
             break;
         case 3:
             olvc.objectType = @"Topic";

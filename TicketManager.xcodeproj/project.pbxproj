@@ -68,6 +68,8 @@
 		FA0F23CE153FDEA00085BCAE /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23BE153FDEA00085BCAE /* Thread.m */; };
 		FA0F23CF153FDEA00085BCAE /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23C0153FDEA00085BCAE /* Topic.m */; };
 		FA0F23D0153FDEA00085BCAE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23C2153FDEA00085BCAE /* User.m */; };
+		FA23C39A154C5D15002BF2D8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23C398154C5D15002BF2D8 /* LoginViewController.m */; };
+		FA23C39B154C5D15002BF2D8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA23C399154C5D15002BF2D8 /* LoginViewController.xib */; };
 		FA66832E1544BD4F0053B6A4 /* ObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +166,9 @@
 		FA0F23C0153FDEA00085BCAE /* Topic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Topic.m; path = Model/Topic.m; sourceTree = "<group>"; };
 		FA0F23C1153FDEA00085BCAE /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
 		FA0F23C2153FDEA00085BCAE /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		FA23C397154C5D15002BF2D8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		FA23C398154C5D15002BF2D8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		FA23C399154C5D15002BF2D8 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		FA66832C1544BD4F0053B6A4 /* ObjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectListViewController.h; sourceTree = "<group>"; };
 		FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,19 +233,22 @@
 		FA03D388153F5F540065ECCF /* TicketManager */ = {
 			isa = PBXGroup;
 			children = (
+				FA03D394153F5F540065ECCF /* TicketManager.xcdatamodeld */,
 				FA03D391153F5F540065ECCF /* AppDelegate.h */,
 				FA03D392153F5F540065ECCF /* AppDelegate.m */,
+				FA0F22E4153FD31A0085BCAE /* DataAdder.h */,
+				FA0F22E5153FD31A0085BCAE /* DataAdder.m */,
 				FA03D397153F5F540065ECCF /* MasterViewController.h */,
 				FA03D398153F5F540065ECCF /* MasterViewController.m */,
 				FA03D39D153F5F540065ECCF /* MasterViewController.xib */,
 				FA03D39A153F5F540065ECCF /* DetailViewController.h */,
 				FA03D39B153F5F540065ECCF /* DetailViewController.m */,
 				FA03D3A0153F5F540065ECCF /* DetailViewController.xib */,
-				FA03D394153F5F540065ECCF /* TicketManager.xcdatamodeld */,
-				FA0F22E4153FD31A0085BCAE /* DataAdder.h */,
-				FA0F22E5153FD31A0085BCAE /* DataAdder.m */,
 				FA66832C1544BD4F0053B6A4 /* ObjectListViewController.h */,
 				FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */,
+				FA23C397154C5D15002BF2D8 /* LoginViewController.h */,
+				FA23C398154C5D15002BF2D8 /* LoginViewController.m */,
+				FA23C399154C5D15002BF2D8 /* LoginViewController.xib */,
 				FA0F22FB153FDA0E0085BCAE /* Model */,
 				FA03D389153F5F540065ECCF /* Supporting Files */,
 			);
@@ -423,6 +431,7 @@
 				FA03D38D153F5F540065ECCF /* InfoPlist.strings in Resources */,
 				FA03D39F153F5F540065ECCF /* MasterViewController.xib in Resources */,
 				FA03D3A2153F5F540065ECCF /* DetailViewController.xib in Resources */,
+				FA23C39B154C5D15002BF2D8 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +514,7 @@
 				FA0F23CF153FDEA00085BCAE /* Topic.m in Sources */,
 				FA0F23D0153FDEA00085BCAE /* User.m in Sources */,
 				FA66832E1544BD4F0053B6A4 /* ObjectListViewController.m in Sources */,
+				FA23C39A154C5D15002BF2D8 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
