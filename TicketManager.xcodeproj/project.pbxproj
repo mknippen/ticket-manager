@@ -70,6 +70,9 @@
 		FA0F23D0153FDEA00085BCAE /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0F23C2153FDEA00085BCAE /* User.m */; };
 		FA23C39A154C5D15002BF2D8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23C398154C5D15002BF2D8 /* LoginViewController.m */; };
 		FA23C39B154C5D15002BF2D8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA23C399154C5D15002BF2D8 /* LoginViewController.xib */; };
+		FA23C3BF154CA6F4002BF2D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23C3BE154CA6F4002BF2D8 /* MapKit.framework */; };
+		FA23C3C1154CA6FC002BF2D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23C3C0154CA6FC002BF2D8 /* CoreLocation.framework */; };
+		FA23C3C2154CA704002BF2D8 /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA23C3BB154CA6CC002BF2D8 /* libQuickDialog.a */; };
 		FA66832E1544BD4F0053B6A4 /* ObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = FA03D37B153F5F540065ECCF;
 			remoteInfo = TicketManager;
+		};
+		FA23C3B8154CA6CC002BF2D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA23C3AF154CA6CC002BF2D8 /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D80B0E3313E052DF00FA85CA;
+			remoteInfo = QuickDialogExample;
+		};
+		FA23C3BA154CA6CC002BF2D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA23C3AF154CA6CC002BF2D8 /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C542393145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
+		FA23C3BC154CA6E5002BF2D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA23C3AF154CA6CC002BF2D8 /* QuickDialog.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C542392145ADEBD0026A152;
+			remoteInfo = QuickDialog;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -169,6 +193,9 @@
 		FA23C397154C5D15002BF2D8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		FA23C398154C5D15002BF2D8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FA23C399154C5D15002BF2D8 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		FA23C3AF154CA6CC002BF2D8 /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = QuickDialog/QuickDialog.xcodeproj; sourceTree = SOURCE_ROOT; };
+		FA23C3BE154CA6F4002BF2D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA23C3C0154CA6FC002BF2D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FA66832C1544BD4F0053B6A4 /* ObjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectListViewController.h; sourceTree = "<group>"; };
 		FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +205,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA23C3C2154CA704002BF2D8 /* libQuickDialog.a in Frameworks */,
+				FA23C3C1154CA6FC002BF2D8 /* CoreLocation.framework in Frameworks */,
+				FA23C3BF154CA6F4002BF2D8 /* MapKit.framework in Frameworks */,
 				FA03D381153F5F540065ECCF /* UIKit.framework in Frameworks */,
 				FA03D383153F5F540065ECCF /* Foundation.framework in Frameworks */,
 				FA03D385153F5F540065ECCF /* CoreGraphics.framework in Frameworks */,
@@ -202,6 +232,7 @@
 		FA03D371153F5F540065ECCF = {
 			isa = PBXGroup;
 			children = (
+				FA23C3AF154CA6CC002BF2D8 /* QuickDialog.xcodeproj */,
 				FA03D388153F5F540065ECCF /* TicketManager */,
 				FA03D3B0153F5F540065ECCF /* TicketManagerTests */,
 				FA03D37F153F5F540065ECCF /* Frameworks */,
@@ -221,6 +252,8 @@
 		FA03D37F153F5F540065ECCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA23C3C0154CA6FC002BF2D8 /* CoreLocation.framework */,
+				FA23C3BE154CA6F4002BF2D8 /* MapKit.framework */,
 				FA03D380153F5F540065ECCF /* UIKit.framework */,
 				FA03D382153F5F540065ECCF /* Foundation.framework */,
 				FA03D384153F5F540065ECCF /* CoreGraphics.framework */,
@@ -356,6 +389,15 @@
 			name = Machine;
 			sourceTree = "<group>";
 		};
+		FA23C3B0154CA6CC002BF2D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA23C3B9154CA6CC002BF2D8 /* QuickDialogExample.app */,
+				FA23C3BB154CA6CC002BF2D8 /* libQuickDialog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,6 +412,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FA23C3BD154CA6E5002BF2D8 /* PBXTargetDependency */,
 			);
 			name = TicketManager;
 			productName = TicketManager;
@@ -414,6 +457,12 @@
 			mainGroup = FA03D371153F5F540065ECCF;
 			productRefGroup = FA03D37D153F5F540065ECCF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FA23C3B0154CA6CC002BF2D8 /* Products */;
+					ProjectRef = FA23C3AF154CA6CC002BF2D8 /* QuickDialog.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FA03D37B153F5F540065ECCF /* TicketManager */,
@@ -422,6 +471,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FA23C3B9154CA6CC002BF2D8 /* QuickDialogExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = QuickDialogExample.app;
+			remoteRef = FA23C3B8154CA6CC002BF2D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA23C3BB154CA6CC002BF2D8 /* libQuickDialog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQuickDialog.a;
+			remoteRef = FA23C3BA154CA6CC002BF2D8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FA03D37A153F5F540065ECCF /* Resources */ = {
@@ -534,6 +600,11 @@
 			target = FA03D37B153F5F540065ECCF /* TicketManager */;
 			targetProxy = FA03D3AE153F5F540065ECCF /* PBXContainerItemProxy */;
 		};
+		FA23C3BD154CA6E5002BF2D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickDialog;
+			targetProxy = FA23C3BC154CA6E5002BF2D8 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -575,7 +646,7 @@
 		FA03D3B9153F5F540065ECCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -592,7 +663,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/QuickDialog\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -601,7 +674,7 @@
 		FA03D3BA153F5F540065ECCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -611,8 +684,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/QuickDialog\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;

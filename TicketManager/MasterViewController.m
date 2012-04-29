@@ -114,6 +114,7 @@
     
     ObjectListViewController *olvc = [[ObjectListViewController alloc] init];
     LoginViewController *lvc;
+    UINavigationController *detailNav;
 
     switch (indexPath.row) {
         case 0:
@@ -124,7 +125,8 @@
             break;
         case 2:            
             lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-            self.splitViewController.viewControllers = [NSArray arrayWithObjects:self.navigationController, lvc, nil];
+            detailNav = [self.splitViewController.viewControllers objectAtIndex:1];
+            [detailNav pushViewController:lvc animated:YES];
             break;
         case 3:
             olvc.objectType = @"Topic";
