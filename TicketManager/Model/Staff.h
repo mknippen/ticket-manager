@@ -17,4 +17,6 @@
 //owner/admin/manager
 - (BOOL)isManager;
 
+- (NSString *)name;
+
 @end

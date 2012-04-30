@@ -44,4 +44,8 @@
     }
 }
 
+- (NSString *)name {
+    return self.userId;
+}
+
 @end

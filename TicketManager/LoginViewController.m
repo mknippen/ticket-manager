@@ -130,6 +130,7 @@
         AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
         User *newUser = [User insertInManagedObjectContext:appDelegate.managedObjectContext];
         newUser.userId = name.textValue;
+        newUser.name = name.textValue;
         newUser.password = pass.textValue;
         newUser.emailId = email.textValue;
         newUser.phone = phone.textValue;

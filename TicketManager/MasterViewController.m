@@ -14,6 +14,7 @@
 #import "User.h"
 #import "Staff.h"
 #import "UserHomepageViewController.h"
+#import "ManagementViewController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -130,6 +131,12 @@
     }
 }
 
+- (void)managerPressed {
+    ManagementViewController *vc = [[ManagementViewController alloc] initWithNibName:@"ManagementViewController" bundle:nil];
+    UINavigationController *detailNav = [self.splitViewController.viewControllers objectAtIndex:1];
+    [detailNav pushViewController:vc animated:YES];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
@@ -154,11 +161,14 @@
         case 4:
             olvc.objectType = @"Staff";
             break;
+        case 5:
+            [self managerPressed];
+            break;
         default:
             break;
     }  
     
-    if (indexPath.row != 2) {
+    if (indexPath.row != 2 && indexPath.row != 5) {
         [self.navigationController pushViewController:olvc animated:YES];
     }
 
