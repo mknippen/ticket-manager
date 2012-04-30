@@ -11,6 +11,9 @@
 #import "DetailViewController.h"
 #import "ObjectListViewController.h"
 #import "LoginViewController.h"
+#import "User.h"
+#import "Staff.h"
+#import "UserHomepageViewController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -49,6 +52,10 @@
     // Release any retained subviews of the main view.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
@@ -83,6 +90,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
+    if ([Staff managementMode]) {
+        return 6;
+    }
+    
     return 5;
 }
 
@@ -106,6 +118,17 @@
     return NO;
 }
 
+- (void)userInfoPressed {
+    
+    UINavigationController *detailNav = [self.splitViewController.viewControllers objectAtIndex:1];
+    if ([User loggedInUser]) {
+        UserHomepageViewController *uh = [[UserHomepageViewController alloc] initWithNibName:@"UserHomepageViewController" bundle:nil];
+        [detailNav pushViewController:uh animated:YES];
+    } else {
+        LoginViewController *lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        [detailNav pushViewController:lvc animated:YES];
+    }
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -113,8 +136,7 @@
 //    self.detailViewController.detailItem = object;
     
     ObjectListViewController *olvc = [[ObjectListViewController alloc] init];
-    LoginViewController *lvc;
-    UINavigationController *detailNav;
+
 
     switch (indexPath.row) {
         case 0:
@@ -124,9 +146,7 @@
             olvc.objectType = @"Movie";
             break;
         case 2:            
-            lvc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-            detailNav = [self.splitViewController.viewControllers objectAtIndex:1];
-            [detailNav pushViewController:lvc animated:YES];
+            [self userInfoPressed];
             break;
         case 3:
             olvc.objectType = @"Topic";
@@ -260,9 +280,23 @@
         case 4:
             cell.textLabel.text = @"Staff";
             break;
+        case 5:
+            cell.textLabel.text = @"Managment Console";
         default:
             break;
     }    
+    
+    if (indexPath.row == 2 && [Staff managementMode]) {
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
+    
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    //Theatre Disclosure Pressed
+    ObjectListViewController *olvc = [[ObjectListViewController alloc] init];
+    olvc.objectType = @"User";
+    [self.navigationController pushViewController:olvc animated:YES];
 }
 
 @end

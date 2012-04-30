@@ -6,6 +6,7 @@
 const struct ScreenAttributes ScreenAttributes = {
 	.capacity = @"capacity",
 	.id = @"id",
+	.name = @"name",
 };
 
 const struct ScreenRelationships ScreenRelationships = {
@@ -104,6 +105,13 @@ const struct ScreenFetchedProperties ScreenFetchedProperties = {
 - (void)setPrimitiveIdValue:(int32_t)value_ {
 	[self setPrimitiveId:[NSNumber numberWithInt:value_]];
 }
+
+
+
+
+
+@dynamic name;
+
 
 
 

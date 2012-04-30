@@ -45,6 +45,7 @@
     <entity name="Screen" representedClassName="Screen" syncable="YES">
         <attribute name="capacity" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
         <relationship name="showings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showing" inverseName="screen" inverseEntity="Showing" syncable="YES"/>
         <relationship name="theatre" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" inverseName="screens" inverseEntity="Theatre" syncable="YES"/>
     </entity>
@@ -114,7 +115,7 @@
         <element name="Movie" positionX="-425" positionY="-531" width="128" height="165"/>
         <element name="Post" positionX="9" positionY="18" width="128" height="120"/>
         <element name="Review" positionX="-675" positionY="-387" width="128" height="150"/>
-        <element name="Screen" positionX="99" positionY="-378" width="128" height="105"/>
+        <element name="Screen" positionX="99" positionY="-378" width="128" height="120"/>
         <element name="Shift" positionX="-722" positionY="225" width="128" height="75"/>
         <element name="Showing" positionX="-135" positionY="-450" width="128" height="120"/>
         <element name="Staff" positionX="-794" positionY="54" width="128" height="120"/>

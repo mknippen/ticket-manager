@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "User.h"
+#import "UserHomepageViewController.h"
 
 @interface LoginViewController ()
 
@@ -30,18 +31,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
+    loggedInCheck = NO;
     
+    
+    [self checkLoginStatus];
+}
+
+- (void)checkLoginStatus {
+    if ([User loggedInUser]) {
+        NSLog(@"Logged In");
+        UserHomepageViewController *homepage = [[UserHomepageViewController alloc] initWithNibName:@"UserHomepageViewController" bundle:nil];
+        [self.navigationController pushViewController:homepage animated:YES];
+    } else {
+        NSLog(@"Not Logged In");
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    if ([User loggedInUser]) {
-        NSLog(@"Logged In");
-    } else {
-        NSLog(@"");
-    }
 }
 
 - (void)viewDidUnload
@@ -59,7 +66,29 @@
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
-    NSLog(@"Logging in.");
+    [usernameField resignFirstResponder];
+    [passwordField resignFirstResponder];
+    
+    if ([usernameField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please Try Again" message:@"The username or password cannot be blank" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    } else {
+        User *userFromField = [User userWithUserId:usernameField.text];
+        if (userFromField) {
+            NSLog(@"Got A User");
+            if ([userFromField.password isEqualToString:passwordField.text]) {
+                [User loginUser:userFromField];
+                [self checkLoginStatus];
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Password Incorrect" message:@"The password was incorrect. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+            }
+        } else {
+            NSLog(@"Didnt get A User");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Username Not Found" message:@"The username was not found. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+        }
+    }
 }
 
 - (QRootElement *)accountRoot {
@@ -111,6 +140,7 @@
         [dateFormat setDateFormat:@"yyyyMM"];
         newUser.ccExpiration = [dateFormat dateFromString:expDateStr];  
         newUser.ccType = ccType.textValue;
+        [appDelegate saveContext];
         [User loginUser:newUser];
         [self.navigationController popViewControllerAnimated:YES];
     };
@@ -134,7 +164,7 @@
     if (textField  == usernameField) {
         [passwordField becomeFirstResponder];
     } else {
-        [passwordField resignFirstResponder];
+        //[passwordField resignFirstResponder];
         [self loginButtonPressed:self];
     }
     

@@ -7,6 +7,7 @@
 extern const struct ScreenAttributes {
 	__unsafe_unretained NSString *capacity;
 	__unsafe_unretained NSString *id;
+	__unsafe_unretained NSString *name;
 } ScreenAttributes;
 
 extern const struct ScreenRelationships {
@@ -19,6 +20,7 @@ extern const struct ScreenFetchedProperties {
 
 @class Showing;
 @class Theatre;
+
 
 
 
@@ -55,6 +57,14 @@ extern const struct ScreenFetchedProperties {
 - (void)setIdValue:(int32_t)value_;
 
 //- (BOOL)validateId:(id*)value_ error:(NSError**)error_;
+
+
+
+
+@property (nonatomic, strong) NSString* name;
+
+
+//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -103,6 +113,12 @@ extern const struct ScreenFetchedProperties {
 
 - (int32_t)primitiveIdValue;
 - (void)setPrimitiveIdValue:(int32_t)value_;
+
+
+
+
+- (NSString*)primitiveName;
+- (void)setPrimitiveName:(NSString*)value;
 
 
 

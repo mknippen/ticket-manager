@@ -116,7 +116,13 @@
     
     // Configure the cell...
     Theatre *obj = (Theatre *)[objects objectAtIndex:indexPath.row];
+    
     cell.textLabel.text = obj.name;
+
+    
+    if ([objectType isEqualToString:@"Theatre"]) {
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
     
     return cell;
 }
@@ -182,6 +188,17 @@
         olvc.predicate = newPredicate;
         [self.navigationController pushViewController:olvc animated:YES];
     }
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    //Theatre Disclosure Pressed
+    Theatre *t = (Theatre *)[objects objectAtIndex:indexPath.row];
+    NSPredicate *newPredicate = [NSPredicate predicateWithFormat:@"theatre == %@", t];
+    ObjectListViewController *olvc = [[ObjectListViewController alloc] init];
+    olvc.objectType = @"Screen";
+    olvc.parentObject = t;
+    olvc.predicate = newPredicate;
+    [self.navigationController pushViewController:olvc animated:YES];
 }
 
 #pragma mark - Action Methods

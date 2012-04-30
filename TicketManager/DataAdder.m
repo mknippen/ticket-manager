@@ -146,6 +146,41 @@
     s5.movie = movie1;
     s5.screen = screen2;
     
+
+    
+    
+    
+    Staff *admin = [Staff insertInManagedObjectContext:ad.managedObjectContext];
+    admin.userId = @"admin";
+    admin.password = @"admin";
+    admin.ssn = @"1";
+    
+    Staff *manager = [Staff insertInManagedObjectContext:ad.managedObjectContext];
+    manager.userId = @"manager";
+    manager.password = @"manager";
+    manager.ssn = @"2";
+    
+    Staff *owner = [Staff insertInManagedObjectContext:ad.managedObjectContext];
+    owner.userId = @"owner";
+    owner.password = @"owner";
+    owner.ssn = @"8";
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Function" inManagedObjectContext:ad.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [ad.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    for (Function *f in fetchedObjects) {
+        if ([f.name isEqualToString:@"Owner"]) {
+            owner.function = f;
+        } else if ([f.name isEqualToString:@"Manager"]) {
+            manager.function = f;
+        } else if ([f.name isEqualToString:@"Administrator"]) {
+            admin.function = f;
+        }
+    }
+    
     [ad.managedObjectContext save:nil];
                      
 }
