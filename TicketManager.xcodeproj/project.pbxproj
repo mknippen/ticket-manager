@@ -76,8 +76,13 @@
 		FA66832E1544BD4F0053B6A4 /* ObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */; };
 		FADB8CF5154DAEEF00F0D175 /* UserHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB8CF3154DAEEF00F0D175 /* UserHomepageViewController.m */; };
 		FADB8CF6154DAEEF00F0D175 /* UserHomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADB8CF4154DAEEF00F0D175 /* UserHomepageViewController.xib */; };
+		FAE5F6D4154F80CA0066C686 /* QueryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F6D2154F80CA0066C686 /* QueryListViewController.m */; };
+		FAE5F6DB154F81FE0066C686 /* QueryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F6D9154F81FE0066C686 /* QueryDetailViewController.m */; };
+		FAE5F6DC154F81FE0066C686 /* QueryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE5F6DA154F81FE0066C686 /* QueryDetailViewController.xib */; };
 		FAE8173E154E12D800254C82 /* ManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE8173C154E12D800254C82 /* ManagementViewController.m */; };
 		FAE8173F154E12D800254C82 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE8173D154E12D800254C82 /* ManagementViewController.xib */; };
+		FAE81743154E565C00254C82 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE81741154E565B00254C82 /* MovieViewController.m */; };
+		FAE81744154E565C00254C82 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE81742154E565B00254C82 /* MovieViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,9 +210,17 @@
 		FADB8CF2154DAEEF00F0D175 /* UserHomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHomepageViewController.h; sourceTree = "<group>"; };
 		FADB8CF3154DAEEF00F0D175 /* UserHomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHomepageViewController.m; sourceTree = "<group>"; };
 		FADB8CF4154DAEEF00F0D175 /* UserHomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserHomepageViewController.xib; sourceTree = "<group>"; };
+		FAE5F6D1154F80CA0066C686 /* QueryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryListViewController.h; sourceTree = "<group>"; };
+		FAE5F6D2154F80CA0066C686 /* QueryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryListViewController.m; sourceTree = "<group>"; };
+		FAE5F6D8154F81FE0066C686 /* QueryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryDetailViewController.h; sourceTree = "<group>"; };
+		FAE5F6D9154F81FE0066C686 /* QueryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryDetailViewController.m; sourceTree = "<group>"; };
+		FAE5F6DA154F81FE0066C686 /* QueryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryDetailViewController.xib; sourceTree = "<group>"; };
 		FAE8173B154E12D700254C82 /* ManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagementViewController.h; sourceTree = "<group>"; };
 		FAE8173C154E12D800254C82 /* ManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagementViewController.m; sourceTree = "<group>"; };
 		FAE8173D154E12D800254C82 /* ManagementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
+		FAE81740154E565A00254C82 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		FAE81741154E565B00254C82 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		FAE81742154E565B00254C82 /* MovieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,23 +294,8 @@
 				FA03D392153F5F540065ECCF /* AppDelegate.m */,
 				FA0F22E4153FD31A0085BCAE /* DataAdder.h */,
 				FA0F22E5153FD31A0085BCAE /* DataAdder.m */,
-				FA03D397153F5F540065ECCF /* MasterViewController.h */,
-				FA03D398153F5F540065ECCF /* MasterViewController.m */,
-				FA03D39D153F5F540065ECCF /* MasterViewController.xib */,
-				FA03D39A153F5F540065ECCF /* DetailViewController.h */,
-				FA03D39B153F5F540065ECCF /* DetailViewController.m */,
-				FA03D3A0153F5F540065ECCF /* DetailViewController.xib */,
-				FA66832C1544BD4F0053B6A4 /* ObjectListViewController.h */,
-				FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */,
-				FA23C397154C5D15002BF2D8 /* LoginViewController.h */,
-				FA23C398154C5D15002BF2D8 /* LoginViewController.m */,
-				FA23C399154C5D15002BF2D8 /* LoginViewController.xib */,
-				FADB8CF2154DAEEF00F0D175 /* UserHomepageViewController.h */,
-				FADB8CF3154DAEEF00F0D175 /* UserHomepageViewController.m */,
-				FADB8CF4154DAEEF00F0D175 /* UserHomepageViewController.xib */,
-				FAE8173B154E12D700254C82 /* ManagementViewController.h */,
-				FAE8173C154E12D800254C82 /* ManagementViewController.m */,
-				FAE8173D154E12D800254C82 /* ManagementViewController.xib */,
+				FAE5F6D6154F81A70066C686 /* Master */,
+				FAE5F6D7154F81B60066C686 /* Detail */,
 				FA0F22FB153FDA0E0085BCAE /* Model */,
 				FA03D389153F5F540065ECCF /* Supporting Files */,
 			);
@@ -414,6 +412,45 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FAE5F6D6154F81A70066C686 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				FA03D397153F5F540065ECCF /* MasterViewController.h */,
+				FA03D398153F5F540065ECCF /* MasterViewController.m */,
+				FA03D39D153F5F540065ECCF /* MasterViewController.xib */,
+				FA66832C1544BD4F0053B6A4 /* ObjectListViewController.h */,
+				FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */,
+				FAE5F6D1154F80CA0066C686 /* QueryListViewController.h */,
+				FAE5F6D2154F80CA0066C686 /* QueryListViewController.m */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		FAE5F6D7154F81B60066C686 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FA03D39A153F5F540065ECCF /* DetailViewController.h */,
+				FA03D39B153F5F540065ECCF /* DetailViewController.m */,
+				FA03D3A0153F5F540065ECCF /* DetailViewController.xib */,
+				FA23C397154C5D15002BF2D8 /* LoginViewController.h */,
+				FA23C398154C5D15002BF2D8 /* LoginViewController.m */,
+				FA23C399154C5D15002BF2D8 /* LoginViewController.xib */,
+				FADB8CF2154DAEEF00F0D175 /* UserHomepageViewController.h */,
+				FADB8CF3154DAEEF00F0D175 /* UserHomepageViewController.m */,
+				FADB8CF4154DAEEF00F0D175 /* UserHomepageViewController.xib */,
+				FAE81740154E565A00254C82 /* MovieViewController.h */,
+				FAE81741154E565B00254C82 /* MovieViewController.m */,
+				FAE81742154E565B00254C82 /* MovieViewController.xib */,
+				FAE5F6D8154F81FE0066C686 /* QueryDetailViewController.h */,
+				FAE5F6D9154F81FE0066C686 /* QueryDetailViewController.m */,
+				FAE5F6DA154F81FE0066C686 /* QueryDetailViewController.xib */,
+				FAE8173B154E12D700254C82 /* ManagementViewController.h */,
+				FAE8173C154E12D800254C82 /* ManagementViewController.m */,
+				FAE8173D154E12D800254C82 /* ManagementViewController.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -516,6 +553,8 @@
 				FA23C39B154C5D15002BF2D8 /* LoginViewController.xib in Resources */,
 				FADB8CF6154DAEEF00F0D175 /* UserHomepageViewController.xib in Resources */,
 				FAE8173F154E12D800254C82 /* ManagementViewController.xib in Resources */,
+				FAE81744154E565C00254C82 /* MovieViewController.xib in Resources */,
+				FAE5F6DC154F81FE0066C686 /* QueryDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +640,9 @@
 				FA23C39A154C5D15002BF2D8 /* LoginViewController.m in Sources */,
 				FADB8CF5154DAEEF00F0D175 /* UserHomepageViewController.m in Sources */,
 				FAE8173E154E12D800254C82 /* ManagementViewController.m in Sources */,
+				FAE81743154E565C00254C82 /* MovieViewController.m in Sources */,
+				FAE5F6D4154F80CA0066C686 /* QueryListViewController.m in Sources */,
+				FAE5F6DB154F81FE0066C686 /* QueryDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

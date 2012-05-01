@@ -2,4 +2,7 @@
 
 @interface Movie : _Movie {}
 // Custom logic goes here.
+
+- (NSSet *)theatres;
+
 @end

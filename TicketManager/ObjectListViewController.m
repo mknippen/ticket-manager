@@ -16,6 +16,8 @@
 #import "Staff.h"
 #import "Post.h"
 
+#import "MovieViewController.h"
+
 @interface ObjectListViewController ()
 
 @end
@@ -142,8 +144,12 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        Theatre *t = [objects objectAtIndex:indexPath.row];
+        AppDelegate *ad = [UIApplication sharedApplication].delegate;
+        [ad.managedObjectContext deleteObject:t];
+        [ad saveContext];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        //TODO: delete from Core Data
+        
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -187,6 +193,12 @@
         olvc.parentObject = t;
         olvc.predicate = newPredicate;
         [self.navigationController pushViewController:olvc animated:YES];
+    } else if ([self.objectType isEqualToString:@"Movie"]) {
+        MovieViewController *mv = [[MovieViewController alloc] initWithNibName:@"MovieViewController" bundle:nil];
+        mv.movie = [objects objectAtIndex:indexPath.row];
+        AppDelegate *ad = [UIApplication sharedApplication].delegate;
+        UINavigationController *nav = [ad.splitViewController.viewControllers objectAtIndex:1];
+        [nav pushViewController:mv animated:YES];
     }
 }
 

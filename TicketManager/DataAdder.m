@@ -109,20 +109,30 @@
     
     Movie *movie1 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
     movie1.name = @"The Avengers";
+    movie1.stars = @"Robert Downey Jr., Chris Hemsworth, Scarlett Johansson";
     movie1.desc = @"All of the best superheroes getting together.";
+    movie1.directors = @"Joss Whedon";
     [movie1 addGenresObject:[Genre adventureGenre]];
     Movie *movie2 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
     movie2.name = @"The Hunger Games";
     movie2.desc = @"Teens killing each other. Blockbuster.";
+    movie2.stars = @"Liam Hensworth, Jennifer Lawerence";
+    movie2.directors = @"Gary Ross";
+
     [movie2 addGenresObject:[Genre adventureGenre]];
     Movie *movie3 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
     movie3.name = @"Titanic 3D";
     movie3.desc = @"10 Year old movie, now with glasses.";
+    movie3.stars = @"Kate Winslet, Leonardo DiCaprio";
+    movie3.directors = @"James Cameron";
+
     [movie3 addGenresObject:[Genre loveGenre]];
     [movie3 addGenresObject:[Genre dramaGenre]];
     Movie *movie4 = [Movie insertInManagedObjectContext:ad.managedObjectContext];
     movie4.name = @"21 Jump Street";
     movie4.desc = @"Police and Drugs. 'Nuff said.";
+    movie4.stars = @"Channing Tatum, Jonah Hill";
+    movie4.directors = @"Phil Lord, Chris Miller";
     [movie4 addGenresObject:[Genre comedyGenre]];
 
     Showing *s1 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
@@ -146,10 +156,6 @@
     s5.movie = movie1;
     s5.screen = screen2;
     
-
-    
-    
-    
     Staff *admin = [Staff insertInManagedObjectContext:ad.managedObjectContext];
     admin.userId = @"admin";
     admin.password = @"admin";
@@ -164,7 +170,6 @@
     owner.userId = @"owner";
     owner.password = @"owner";
     owner.ssn = @"8";
-    
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Function" inManagedObjectContext:ad.managedObjectContext];

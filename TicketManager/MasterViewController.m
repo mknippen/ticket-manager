@@ -15,6 +15,7 @@
 #import "Staff.h"
 #import "UserHomepageViewController.h"
 #import "ManagementViewController.h"
+#import "QueryListViewController.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -93,10 +94,10 @@
 {
     
     if ([Staff managementMode]) {
-        return 6;
+        return 7;
     }
     
-    return 5;
+    return 6;
 }
 
 // Customize the appearance of table view cells.
@@ -131,6 +132,11 @@
     }
 }
 
+- (void)queryPressed {
+    QueryListViewController *q = [[QueryListViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:q animated:YES];
+}
+
 - (void)managerPressed {
     ManagementViewController *vc = [[ManagementViewController alloc] initWithNibName:@"ManagementViewController" bundle:nil];
     UINavigationController *detailNav = [self.splitViewController.viewControllers objectAtIndex:1];
@@ -162,13 +168,16 @@
             olvc.objectType = @"Staff";
             break;
         case 5:
+            [self queryPressed];
+            break;
+        case 6:
             [self managerPressed];
             break;
         default:
             break;
     }  
     
-    if (indexPath.row != 2 && indexPath.row != 5) {
+    if (indexPath.row != 2 && indexPath.row != 5  && indexPath.row != 6) {
         [self.navigationController pushViewController:olvc animated:YES];
     }
 
@@ -291,7 +300,11 @@
             cell.textLabel.text = @"Staff";
             break;
         case 5:
+            cell.textLabel.text = @"Queries";
+            break;
+        case 6:
             cell.textLabel.text = @"Managment Console";
+            break;
         default:
             break;
     }    
