@@ -1,31 +1,25 @@
 //
-//  MovieViewController.m
+//  TheatreViewController.m
 //  TicketManager
 //
-//  Created by Matthew Knippen on 4/30/12.
+//  Created by Matthew Knippen on 5/1/12.
 //  Copyright (c) 2012 Zwiffer Inc. All rights reserved.
 //
 
-#import "MovieViewController.h"
-#import "Movie.h"
-#import "Theatre.h"
-#import "Genre.h"
 #import "TheatreViewController.h"
+#import "Theatre.h"
+#import "MovieViewController.h"
 
-@interface MovieViewController ()
+@interface TheatreViewController ()
 
 @end
 
-@implementation MovieViewController
-
-@synthesize movie;
-@synthesize theatreTableView;
+@implementation TheatreViewController
+@synthesize theatre;
+@synthesize movieTableView;
 @synthesize reviewsTableView;
-@synthesize starsLabel;
-@synthesize directorsLabel;
-@synthesize genresLabel;
-@synthesize descLabel;
-@synthesize theatres;
+@synthesize addressLabel;
+@synthesize movies;
 @synthesize reviews;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,40 +34,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     
-    if (movie) {
-        self.title = movie.name;
-        starsLabel.text = movie.stars;
-        directorsLabel.text = movie.directors;
-        descLabel.text = movie.desc;
+    if (theatre) {
+        self.title = theatre.name;
+        addressLabel.text = theatre.address;
         
-        NSMutableString *str = [[NSMutableString alloc] initWithCapacity:10];
-        for (Genre *g in movie.genres) {
-            [str appendString:g.name];
-            [str appendString:@", "];
-        }
-        
-        if (str.length > 2) {
-            genresLabel.text = [str substringToIndex:str.length-2];
-        } else {
-            genresLabel.text = @"";
-        }
-                
-        theatres = [movie.theatres allObjects];
-        reviews = [movie.reviews allObjects];
-        [theatreTableView reloadData];
+        movies = [theatre.movies allObjects];
+        reviews = [theatre.reviews allObjects];
+        [movieTableView reloadData];
         [reviewsTableView reloadData];
     }
+    
 }
 
 - (void)viewDidUnload
 {
-    [self setTheatreTableView:nil];
-    [self setStarsLabel:nil];
-    [self setDirectorsLabel:nil];
-    [self setGenresLabel:nil];
+    [self setMovieTableView:nil];
     [self setReviewsTableView:nil];
-    [self setDescLabel:nil];
+    [self setAddressLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -95,9 +74,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if (tableView == theatreTableView) {
-        if (theatres) {
-            return [theatres count];
+    if (tableView == movieTableView) {
+        if (movies) {
+            return [movies count];
         } else {
             return 0;
         }
@@ -111,8 +90,8 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (tableView == theatreTableView) {
-        return @"Theatres";
+    if (tableView == movieTableView) {
+        return @"Movies";
     } else {
         return @"Reviews";
     }
@@ -128,11 +107,10 @@
     }
     
     // Configure the cell...
-    
     Theatre *obj;
     
-    if (tableView == theatreTableView) {
-        obj = (Theatre *)[theatres objectAtIndex:indexPath.row];
+    if (tableView == movieTableView) {
+        obj = (Theatre *)[movies objectAtIndex:indexPath.row];
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     } else {
         obj = (Theatre *)[reviews objectAtIndex:indexPath.row];
@@ -144,20 +122,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (tableView == theatreTableView) {
+    if (tableView == movieTableView) {
         //Show the times page
-
+        
     } else {
         //Show the review details
     }
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
-    //Show the theatre page
-    TheatreViewController *vc = [[TheatreViewController alloc] initWithNibName:nil bundle:nil];
-    id t = [theatres objectAtIndex:indexPath.row];
-    vc.theatre = t;
+    //Show the movie page
+    MovieViewController *vc = [[MovieViewController alloc] initWithNibName:nil bundle:nil];
+    id movie = [movies objectAtIndex:indexPath.row];
+    vc.movie = movie;
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
+
+
 
 @end

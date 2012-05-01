@@ -98,6 +98,15 @@ const struct TheatreFetchedProperties TheatreFetchedProperties = {
 @dynamic reviews;
 
 	
+- (NSMutableSet*)reviewsSet {
+	[self willAccessValueForKey:@"reviews"];
+  
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"reviews"];
+  
+	[self didAccessValueForKey:@"reviews"];
+	return result;
+}
+	
 
 @dynamic screens;
 

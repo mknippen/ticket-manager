@@ -4,4 +4,8 @@
 
 // Custom logic goes here.
 
+- (NSString *)name {
+    return self.desc;
+}
+
 @end

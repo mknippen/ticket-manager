@@ -17,6 +17,7 @@
 #import "Post.h"
 
 #import "MovieViewController.h"
+#import "TheatreViewController.h"
 
 @interface ObjectListViewController ()
 
@@ -196,6 +197,12 @@
     } else if ([self.objectType isEqualToString:@"Movie"]) {
         MovieViewController *mv = [[MovieViewController alloc] initWithNibName:@"MovieViewController" bundle:nil];
         mv.movie = [objects objectAtIndex:indexPath.row];
+        AppDelegate *ad = [UIApplication sharedApplication].delegate;
+        UINavigationController *nav = [ad.splitViewController.viewControllers objectAtIndex:1];
+        [nav pushViewController:mv animated:YES];
+    } else if ([self.objectType isEqualToString:@"Theatre"]) {
+        TheatreViewController *mv = [[TheatreViewController alloc] initWithNibName:@"TheatreViewController" bundle:nil];
+        mv.theatre = [objects objectAtIndex:indexPath.row];
         AppDelegate *ad = [UIApplication sharedApplication].delegate;
         UINavigationController *nav = [ad.splitViewController.viewControllers objectAtIndex:1];
         [nav pushViewController:mv animated:YES];

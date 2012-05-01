@@ -13,5 +13,6 @@
 @property (nonatomic) int queryNum; 
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UITableView *resultsTableView;
+@property (nonatomic, strong) NSMutableArray *objects;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "User.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -17,6 +18,7 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize logoutButton = _logoutButton;
 @synthesize masterPopoverController = _masterPopoverController;
 
 #pragma mark - Managing the detail item
@@ -51,8 +53,19 @@
     [self configureView];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (![User loggedInUser]) 
+        _logoutButton.hidden = YES;
+    else {
+        _logoutButton.hidden = NO;
+    }
+}
+
+
 - (void)viewDidUnload
 {
+    [self setLogoutButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailDescriptionLabel = nil;
@@ -88,4 +101,10 @@
     self.masterPopoverController = nil;
 }
 
+- (IBAction)logoutButtonPressed:(id)sender {
+    [User loginUser:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Logged Out" message:@"You are now logged out." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    _logoutButton.hidden = YES;
+}
 @end

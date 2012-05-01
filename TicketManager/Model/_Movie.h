@@ -95,9 +95,9 @@ extern const struct MovieFetchedProperties {
 
 
 
-@property (nonatomic, strong) Review* reviews;
+@property (nonatomic, strong) NSSet* reviews;
 
-//- (BOOL)validateReviews:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)reviewsSet;
 
 
 
@@ -118,6 +118,11 @@ extern const struct MovieFetchedProperties {
 - (void)removeGenres:(NSSet*)value_;
 - (void)addGenresObject:(Genre*)value_;
 - (void)removeGenresObject:(Genre*)value_;
+
+- (void)addReviews:(NSSet*)value_;
+- (void)removeReviews:(NSSet*)value_;
+- (void)addReviewsObject:(Review*)value_;
+- (void)removeReviewsObject:(Review*)value_;
 
 - (void)addShowings:(NSSet*)value_;
 - (void)removeShowings:(NSSet*)value_;
@@ -168,8 +173,8 @@ extern const struct MovieFetchedProperties {
 
 
 
-- (Review*)primitiveReviews;
-- (void)setPrimitiveReviews:(Review*)value;
+- (NSMutableSet*)primitiveReviews;
+- (void)setPrimitiveReviews:(NSMutableSet*)value;
 
 
 

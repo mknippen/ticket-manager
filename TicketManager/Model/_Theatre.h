@@ -68,9 +68,9 @@ extern const struct TheatreFetchedProperties {
 
 
 
-@property (nonatomic, strong) Review* reviews;
+@property (nonatomic, strong) NSSet* reviews;
 
-//- (BOOL)validateReviews:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)reviewsSet;
 
 
 
@@ -93,6 +93,11 @@ extern const struct TheatreFetchedProperties {
 @end
 
 @interface _Theatre (CoreDataGeneratedAccessors)
+
+- (void)addReviews:(NSSet*)value_;
+- (void)removeReviews:(NSSet*)value_;
+- (void)addReviewsObject:(Review*)value_;
+- (void)removeReviewsObject:(Review*)value_;
 
 - (void)addScreens:(NSSet*)value_;
 - (void)removeScreens:(NSSet*)value_;
@@ -131,8 +136,8 @@ extern const struct TheatreFetchedProperties {
 
 
 
-- (Review*)primitiveReviews;
-- (void)setPrimitiveReviews:(Review*)value;
+- (NSMutableSet*)primitiveReviews;
+- (void)setPrimitiveReviews:(NSMutableSet*)value;
 
 
 

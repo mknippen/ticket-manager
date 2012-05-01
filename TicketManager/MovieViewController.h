@@ -14,8 +14,13 @@
 
 @property (nonatomic, strong) Movie *movie;
 @property (strong, nonatomic) IBOutlet UITableView *theatreTableView;
+@property (strong, nonatomic) IBOutlet UITableView *reviewsTableView;
 @property (strong, nonatomic) IBOutlet UILabel *starsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *directorsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *genresLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descLabel;
 @property (nonatomic, strong) NSArray *theatres;
+@property (nonatomic, strong) NSArray *reviews;
+
 
 @end

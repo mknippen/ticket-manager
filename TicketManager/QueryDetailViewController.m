@@ -7,6 +7,7 @@
 //
 
 #import "QueryDetailViewController.h"
+#import "Theatre.h"
 
 @interface QueryDetailViewController ()
 
@@ -17,12 +18,14 @@
 @synthesize queryNum;
 @synthesize descriptionTextView;
 @synthesize resultsTableView;
+@synthesize objects;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        objects = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -53,6 +56,7 @@
         case 8:
             return @"Send an alert to the owner and manager if no employee with the job of security is scheduled to work tomorrow.";
         default:
+            return nil;
             break;
     }
 }
@@ -70,5 +74,46 @@
 {
 	return YES;
 }
+
+#pragma mark - UITableViewMethods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return [objects count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Results";
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    // Configure the cell...
+    Theatre *obj = (Theatre *)[objects objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = obj.name;
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Shouldnt need anything here.
+}
+
 
 @end

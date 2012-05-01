@@ -43,7 +43,6 @@ static Genre *family;
 
 }
 
-
 + (Genre *)dramaGenre {
     if (!drama) {
         [self setupGenres];

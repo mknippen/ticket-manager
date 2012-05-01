@@ -23,7 +23,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stars" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Genre" syncable="YES"/>
-        <relationship name="reviews" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Review" inverseName="movie" inverseEntity="Review" syncable="YES"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="movie" inverseEntity="Review" syncable="YES"/>
         <relationship name="showings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showing" inverseName="movie" inverseEntity="Showing" syncable="YES"/>
     </entity>
     <entity name="Post" representedClassName="Post" syncable="YES">
@@ -71,7 +71,7 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="reviews" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Review" inverseName="theatre" inverseEntity="Review" syncable="YES"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="theatre" inverseEntity="Review" syncable="YES"/>
         <relationship name="screens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Screen" inverseName="theatre" inverseEntity="Screen" syncable="YES"/>
         <relationship name="staff" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Staff" inverseName="theatre" inverseEntity="Staff" syncable="YES"/>
     </entity>
