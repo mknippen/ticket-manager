@@ -10,6 +10,7 @@
 #import "Theatre.h"
 #import "MovieViewController.h"
 #import "ReviewViewController.h"
+#import "ShowingViewController.h"
 
 @interface TheatreViewController ()
 
@@ -125,7 +126,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == movieTableView) {
         //Show the times page
-        
+        ShowingViewController *vc = [[ShowingViewController alloc] initWithNibName:nil bundle:nil];
+        vc.movie = [movies objectAtIndex:indexPath.row];
+        vc.theatre = theatre;
+        [self.navigationController pushViewController:vc animated:YES];
     } else {
         //Show the review details
         ReviewViewController *vc = [[ReviewViewController alloc] initWithNibName:nil bundle:nil];

@@ -155,37 +155,49 @@
     movie4.directors = @"Phil Lord, Chris Miller";
     [movie4 addGenresObject:[Genre comedyGenre]];
 
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"HH:mm"];
+    NSString *time;
+    
     Showing *s1 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s1.timeStamp = [NSDate date];
+    time = @"16:00";
+    s1.timeStamp = [dateFormat dateFromString:time];
     s1.movie = movie1;
     s1.screen = screen2;
     Showing *s2 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s2.timeStamp = [NSDate date];
+    time = @"10:30";
+    s2.timeStamp = [dateFormat dateFromString:time];
     s2.movie = movie1;
     s2.screen = screen1;
     Showing *s3 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s3.timeStamp = [NSDate date];
+    time = @"14:30";
+    s3.timeStamp = [dateFormat dateFromString:time];
     s3.movie = movie2;
     s3.screen = screen1;
     Showing *s4 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s4.timeStamp = [NSDate date];
+    time = @"22:45";
+    s4.timeStamp = [dateFormat dateFromString:time];
     s4.movie = movie3;
     s4.screen = screen1;
     Showing *s5 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s5.timeStamp = [NSDate date];
+    time = @"11:30";
+    s5.timeStamp = [dateFormat dateFromString:time];
     s5.movie = movie1;
     s5.screen = screen2;
     
     Showing *s6 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s6.timeStamp = [NSDate date];
+    time = @"16:30";
+    s6.timeStamp = [dateFormat dateFromString:time];
     s6.movie = movie2;
     s6.screen = screen4;
     Showing *s7 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s7.timeStamp = [NSDate date];
+    time = @"10:15";
+    s7.timeStamp = [dateFormat dateFromString:time];
     s7.movie = movie4;
     s7.screen = screen4;
     Showing *s8 = [Showing insertInManagedObjectContext:ad.managedObjectContext];
-    s8.timeStamp = [NSDate date];
+    time = @"12:00";
+    s8.timeStamp = [dateFormat dateFromString:time];
     s8.movie = movie4;
     s8.screen = screen5;
     

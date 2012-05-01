@@ -57,6 +57,8 @@ static User *loggedIn = nil;
     [fetchRequest setEntity:entity];
     NSArray *fetchedObjects = [ad.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
+    Membership *oldMembership = self.membership;
+    
     Membership *plat;
     Membership *gold;
     Membership *silver;
@@ -84,6 +86,34 @@ static User *loggedIn = nil;
     } else {
         self.membership = none;
     }
+    
+    
+    BOOL changed = NO;
+    if (oldMembership) {
+        if ([oldMembership.name isEqualToString:@"None"]) {
+            if (self.membership == silver || self.membership == gold || self.membership == plat) {
+                changed = YES;
+            }
+        } else if ([oldMembership.name isEqualToString:@"Silver"]) {
+            if (self.membership == gold || self.membership == plat) {
+                changed = YES;
+            }
+        } else if ([oldMembership.name isEqualToString:@"Gold"]) {
+            if (self.membership == plat) {
+                changed = YES;
+            }
+        }
+    }
+    
+    if (changed) {
+        //inform the user of this change
+        [self performSelectorOnMainThread:@selector(membershipLevelUp) withObject:nil waitUntilDone:NO];
+    }
+}
+
+- (void)membershipLevelUp {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Level Up!" message:[NSString stringWithFormat:@"You have reached a new membership level. Your level is now %@!", self.membership.name] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)addPoints:(int)points {
