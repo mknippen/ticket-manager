@@ -40,7 +40,7 @@
 - (NSString *)descriptionForQuery {
     switch (queryNum) {
         case 1:
-            return @"Display the 10 most recent discussions/comments from a specific discussion thread. \n Specific Post: ";
+            return @"Display the 10 most recent discussions/comments from a specific discussion thread. \n Specific Post: Best Popcorn Ever!";
         case 2:
             return @"Display the 10 most recent discussions/comments from all discussion threads.";
         case 3:
