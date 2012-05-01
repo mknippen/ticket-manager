@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ObjectListViewController : UITableViewController
+@class Theatre;
+
+@interface ObjectListViewController : UITableViewController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSString *objectType;
 @property (nonatomic, strong) NSArray *objects;
 @property (nonatomic, strong) NSPredicate *predicate;
 @property (nonatomic, strong) NSManagedObject *parentObject;
 
+@property (nonatomic, strong) Theatre *renamedObject;
 
 @end

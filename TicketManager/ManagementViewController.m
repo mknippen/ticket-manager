@@ -43,6 +43,9 @@
 	return YES;
 }
 
-- (IBAction)managerSwitchChanged:(id)sender {
+- (IBAction)managerSwitchChanged:(UISwitch *)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:sender.on forKey:@"managerCreatesMovies"];
+    [defaults synchronize];
 }
 @end

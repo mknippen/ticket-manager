@@ -13,6 +13,9 @@
 @property (nonatomic) int queryNum; 
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UITableView *resultsTableView;
-@property (nonatomic, strong) NSMutableArray *objects;
+@property (nonatomic, strong) NSArray *objects;
+@property (strong, nonatomic) IBOutlet UIButton *pointsButton;
+@property (nonatomic, strong) NSManagedObjectContext *moc;
+- (IBAction)plusPointsPressed:(id)sender;
 
 @end

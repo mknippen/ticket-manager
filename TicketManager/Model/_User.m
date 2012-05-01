@@ -19,10 +19,12 @@ const struct UserAttributes UserAttributes = {
 
 const struct UserRelationships UserRelationships = {
 	.membership = @"membership",
+	.postsWritten = @"postsWritten",
 	.reviewsDisliked = @"reviewsDisliked",
 	.reviewsLiked = @"reviewsLiked",
 	.reviewsWritten = @"reviewsWritten",
 	.showingsSeen = @"showingsSeen",
+	.threadsStarted = @"threadsStarted",
 };
 
 const struct UserFetchedProperties UserFetchedProperties = {
@@ -188,6 +190,19 @@ const struct UserFetchedProperties UserFetchedProperties = {
 
 	
 
+@dynamic postsWritten;
+
+	
+- (NSMutableSet*)postsWrittenSet {
+	[self willAccessValueForKey:@"postsWritten"];
+  
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"postsWritten"];
+  
+	[self didAccessValueForKey:@"postsWritten"];
+	return result;
+}
+	
+
 @dynamic reviewsDisliked;
 
 	
@@ -236,6 +251,19 @@ const struct UserFetchedProperties UserFetchedProperties = {
 	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"showingsSeen"];
   
 	[self didAccessValueForKey:@"showingsSeen"];
+	return result;
+}
+	
+
+@dynamic threadsStarted;
+
+	
+- (NSMutableSet*)threadsStartedSet {
+	[self willAccessValueForKey:@"threadsStarted"];
+  
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"threadsStarted"];
+  
+	[self didAccessValueForKey:@"threadsStarted"];
 	return result;
 }
 	

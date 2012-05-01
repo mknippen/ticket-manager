@@ -10,7 +10,7 @@
 
 @class Movie, Theatre;
 
-@interface ShowingViewController : UIViewController {
+@interface ShowingViewController : UIViewController <UIAlertViewDelegate> {
     
 }
 

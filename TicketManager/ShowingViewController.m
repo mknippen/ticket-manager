@@ -10,6 +10,7 @@
 #import "Movie.h"
 #import "Theatre.h"
 #import "Showing.h"
+#import "User.h"
 
 @interface ShowingViewController ()
 
@@ -119,9 +120,71 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Let people purchase tickets
+- (void)purchaseFromMember {
+    User *u = [User loggedInUser];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Confirm Purchase" message:[NSString stringWithFormat:@"%@, are you sure you would like to purchase this ticket with your %@ credit card?", u.userId, u.ccType] delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    [alert show];
 }
 
+- (QRootElement *)accountRoot {
+    QRootElement *root = [[QRootElement alloc] init];
+    root.title = @"Create an Account";
+    root.grouped = YES;
+    
+    QSection *section = [[QSection alloc] init];
+    QEntryElement *name = [[QEntryElement alloc] initWithTitle:@"Name:" Value:nil Placeholder:nil];
+    QEntryElement *email = [[QEntryElement alloc] initWithTitle:@"Email:" Value:nil Placeholder:@"example@email.com"];
+    QEntryElement *phone = [[QEntryElement alloc] initWithTitle:@"Phone Number:" Value:nil Placeholder:nil];
+    phone.keyboardType = UIKeyboardTypePhonePad;
+    [section addElement:name];
+    [section addElement:email];
+    [section addElement:phone];
+    
+    QEntryElement *ccNum = [[QEntryElement alloc] initWithTitle:@"Credit Card Number:" Value:nil Placeholder:nil];
+    ccNum.keyboardType = UIKeyboardTypePhonePad;
+    [section addElement:ccNum];
+
+    QSection *section2 = [[QSection alloc] init];
+    QButtonElement *createButton = [[QButtonElement alloc] initWithTitle:@"Purchase Ticket"];
+    createButton.onSelected = ^ {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Your ticket has been purchased" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    };
+    
+    [section2 addElement:createButton];
+    
+    [root addSection:section];
+    [root addSection:section2];
+    return root;
+}
+
+- (void)purchaseFromGuest {
+    QuickDialogController *controller = [QuickDialogController controllerForRoot:[self accountRoot]];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Let people purchase tickets
+    if ([User loggedInUser]) {
+        [self purchaseFromMember];
+    } else {
+        [self purchaseFromGuest];
+    }
+}
+
+#pragma mark - UIAlertViewMethods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([alertView.title isEqualToString:@"Confirm Purchase"]) {
+        if (buttonIndex == 1) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Your ticket has been purchased." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+    } else if ([User loggedInUser]) {
+        [[User loggedInUser] addPoints:100];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
 
 @end

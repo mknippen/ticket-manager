@@ -31,7 +31,7 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="thread" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Thread" inverseName="posts" inverseEntity="Thread" syncable="YES"/>
-        <relationship name="writer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <relationship name="writer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="postsWritten" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
@@ -83,7 +83,7 @@
         <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="thread" inverseEntity="Post" syncable="YES"/>
         <relationship name="theatre" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" syncable="YES"/>
         <relationship name="topic" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Topic" inverseName="threads" inverseEntity="Topic" syncable="YES"/>
-        <relationship name="userStarted" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <relationship name="userStarted" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="threadsStarted" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Topic" representedClassName="Topic" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -103,10 +103,12 @@
         <attribute name="totalCreditPoints" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="membership" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Membership" inverseName="users" inverseEntity="Membership" syncable="YES"/>
+        <relationship name="postsWritten" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Post" inverseName="writer" inverseEntity="Post" syncable="YES"/>
         <relationship name="reviewsDisliked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="usersDisliked" inverseEntity="Review" syncable="YES"/>
         <relationship name="reviewsLiked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="usersLiked" inverseEntity="Review" syncable="YES"/>
         <relationship name="reviewsWritten" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="writer" inverseEntity="Review" syncable="YES"/>
         <relationship name="showingsSeen" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Showing" inverseName="usersAttending" inverseEntity="Showing" syncable="YES"/>
+        <relationship name="threadsStarted" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Thread" inverseName="userStarted" inverseEntity="Thread" syncable="YES"/>
     </entity>
     <elements>
         <element name="Function" positionX="-632" positionY="18" width="128" height="105"/>

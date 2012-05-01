@@ -20,20 +20,24 @@ extern const struct UserAttributes {
 
 extern const struct UserRelationships {
 	__unsafe_unretained NSString *membership;
+	__unsafe_unretained NSString *postsWritten;
 	__unsafe_unretained NSString *reviewsDisliked;
 	__unsafe_unretained NSString *reviewsLiked;
 	__unsafe_unretained NSString *reviewsWritten;
 	__unsafe_unretained NSString *showingsSeen;
+	__unsafe_unretained NSString *threadsStarted;
 } UserRelationships;
 
 extern const struct UserFetchedProperties {
 } UserFetchedProperties;
 
 @class Membership;
+@class Post;
 @class Review;
 @class Review;
 @class Review;
 @class Showing;
+@class Thread;
 
 
 
@@ -163,6 +167,13 @@ extern const struct UserFetchedProperties {
 
 
 
+@property (nonatomic, strong) NSSet* postsWritten;
+
+- (NSMutableSet*)postsWrittenSet;
+
+
+
+
 @property (nonatomic, strong) NSSet* reviewsDisliked;
 
 - (NSMutableSet*)reviewsDislikedSet;
@@ -191,10 +202,22 @@ extern const struct UserFetchedProperties {
 
 
 
+@property (nonatomic, strong) NSSet* threadsStarted;
+
+- (NSMutableSet*)threadsStartedSet;
+
+
+
+
 
 @end
 
 @interface _User (CoreDataGeneratedAccessors)
+
+- (void)addPostsWritten:(NSSet*)value_;
+- (void)removePostsWritten:(NSSet*)value_;
+- (void)addPostsWrittenObject:(Post*)value_;
+- (void)removePostsWrittenObject:(Post*)value_;
 
 - (void)addReviewsDisliked:(NSSet*)value_;
 - (void)removeReviewsDisliked:(NSSet*)value_;
@@ -215,6 +238,11 @@ extern const struct UserFetchedProperties {
 - (void)removeShowingsSeen:(NSSet*)value_;
 - (void)addShowingsSeenObject:(Showing*)value_;
 - (void)removeShowingsSeenObject:(Showing*)value_;
+
+- (void)addThreadsStarted:(NSSet*)value_;
+- (void)removeThreadsStarted:(NSSet*)value_;
+- (void)addThreadsStartedObject:(Thread*)value_;
+- (void)removeThreadsStartedObject:(Thread*)value_;
 
 @end
 
@@ -299,6 +327,11 @@ extern const struct UserFetchedProperties {
 
 
 
+- (NSMutableSet*)primitivePostsWritten;
+- (void)setPrimitivePostsWritten:(NSMutableSet*)value;
+
+
+
 - (NSMutableSet*)primitiveReviewsDisliked;
 - (void)setPrimitiveReviewsDisliked:(NSMutableSet*)value;
 
@@ -316,6 +349,11 @@ extern const struct UserFetchedProperties {
 
 - (NSMutableSet*)primitiveShowingsSeen;
 - (void)setPrimitiveShowingsSeen:(NSMutableSet*)value;
+
+
+
+- (NSMutableSet*)primitiveThreadsStarted;
+- (void)setPrimitiveThreadsStarted:(NSMutableSet*)value;
 
 
 @end

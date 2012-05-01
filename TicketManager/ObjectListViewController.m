@@ -15,6 +15,7 @@
 #import "Thread.h"
 #import "Staff.h"
 #import "Post.h"
+#import "Screen.h"
 
 #import "MovieViewController.h"
 #import "TheatreViewController.h"
@@ -25,7 +26,7 @@
 
 @implementation ObjectListViewController
 
-@synthesize objectType, objects, predicate, parentObject;
+@synthesize objectType, objects, predicate, parentObject, renamedObject;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -120,7 +121,12 @@
     // Configure the cell...
     Theatre *obj = (Theatre *)[objects objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = obj.name;
+    if ([objectType isEqualToString:@"Screen"]) {
+        cell.textLabel.text = [NSString stringWithFormat:@"Screen %i", indexPath.row+1];
+    } else {
+        cell.textLabel.text = obj.name;
+
+    }
 
     
     if ([objectType isEqualToString:@"Theatre"]) {
@@ -149,7 +155,8 @@
         AppDelegate *ad = [UIApplication sharedApplication].delegate;
         [ad.managedObjectContext deleteObject:t];
         [ad saveContext];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self getObjects];
+        //[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -222,33 +229,89 @@
 
 #pragma mark - Action Methods
 
+- (void)notLoggedInAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You must be logged in and have the correct access to do that." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)getNameForObject {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter Name" message:@"Please enter a name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
 - (void)addButtonPressed:(id)sender {
     AppDelegate *ad = (AppDelegate *)[UIApplication sharedApplication].delegate;
-
+    BOOL manageMovie = [[NSUserDefaults standardUserDefaults] boolForKey:@"managerCreatesMovies"];
+    
     if ([self.objectType isEqualToString:@"Movie"]) {
-        Movie *m = [Movie insertInManagedObjectContext:ad.managedObjectContext];
-        m.name = @"New Movie";
+        if ([Staff ownerMode] || (manageMovie && [Staff managementMode])) {
+            Movie *m = [Movie insertInManagedObjectContext:ad.managedObjectContext];
+            m.name = @"New Movie";
+            renamedObject = (Theatre *)m;
+            [self getNameForObject];
+        } else {
+            [self notLoggedInAlert];
+        }
     } else if ([self.objectType isEqualToString:@"Theatre"]) {
-        Theatre *t = [Theatre insertInManagedObjectContext:ad.managedObjectContext];
-        t.name = @"New Theatre";
+        if ([Staff ownerMode]) {
+            Theatre *t = [Theatre insertInManagedObjectContext:ad.managedObjectContext];
+            t.name = @"New Theatre";
+            renamedObject = (Theatre *)t;
+            [self getNameForObject];
+        } else {
+            [self notLoggedInAlert];
+        }
     } else if ([self.objectType isEqualToString:@"Staff"]) {
-        Staff *s = [Staff insertInManagedObjectContext:ad.managedObjectContext];
-        s.name = @"New Staff";
+        if ([Staff ownerMode]) {
+            Staff *s = [Staff insertInManagedObjectContext:ad.managedObjectContext];
+            s.name = @"New Staff";
+            renamedObject = (Theatre *)s;
+        } else {
+            [self notLoggedInAlert];
+        }
+    } else if ([self.objectType isEqualToString:@"Screen"]) {
+        if ([Staff ownerMode]) {
+            Screen *s = [Screen insertInManagedObjectContext:ad.managedObjectContext];
+            s.capacity = [NSNumber numberWithInt:500];
+            s.theatre = (Theatre *)parentObject;
+        } else {
+            [self notLoggedInAlert];
+        }
     } else if ([self.objectType isEqualToString:@"Thread"]) {
-        Thread *t = [Thread insertInManagedObjectContext:ad.managedObjectContext];
-        t.name = @"New Thread";
-        t.topic = (Topic *)parentObject;
+        if ([User loggedInUser]) {        
+            Thread *t = [Thread insertInManagedObjectContext:ad.managedObjectContext];
+            t.name = @"New Thread";
+            t.topic = (Topic *)parentObject;
+            t.userStarted = [User loggedInUser];
+            renamedObject = (Theatre *)t;
+            [self getNameForObject];
+            [[User loggedInUser] addPoints:10];
+        } else {
+            [self notLoggedInAlert];
+        }
     } else if ([self.objectType isEqualToString:@"Post"]) {
-        Post *p = [Post insertInManagedObjectContext:ad.managedObjectContext];
-        p.name = @"New Name";
-        p.thread = (Thread *)parentObject;
+        if ([User loggedInUser]) {        
+            Post *p = [Post insertInManagedObjectContext:ad.managedObjectContext];
+            p.name = @"New Name";
+            p.thread = (Thread *)parentObject;
+            p.writer = [User loggedInUser];
+            renamedObject = (Theatre *)p;
+            [self getNameForObject];
+            [[User loggedInUser] addPoints:5];
+        } else {
+            [self notLoggedInAlert];
+        }
     }
     
     [self getObjects];
     
-//    [NSClassFromString(objectType) ];
-//    [Theatre insertInManagedObjectContext:<#(NSManagedObjectContext *)#>
-    //NSManagedObject *object = [[NSManagedObject alloc] initWithEntity:<#(NSEntityDescription *)#> insertIntoManagedObjectContext:<#(NSManagedObjectContext *)#>]
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    renamedObject.name = [alertView textFieldAtIndex:0].text;
+    [self getObjects];
+}
+
 
 @end

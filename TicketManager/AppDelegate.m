@@ -54,6 +54,7 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    [self saveContext];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -167,8 +168,9 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+        NSLog(@"DB Changed. It has been cleared");
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+
     }    
     
     return __persistentStoreCoordinator;

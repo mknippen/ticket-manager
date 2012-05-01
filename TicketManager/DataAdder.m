@@ -227,6 +227,21 @@
     owner.phone = @"3125911035";
     owner.ssn = @"8";
     
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Function" inManagedObjectContext:ad.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [ad.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    for (Function *f in fetchedObjects) {
+        if ([f.name isEqualToString:@"Owner"]) {
+            owner.function = f;
+        } else if ([f.name isEqualToString:@"Manager"]) {
+            manager.function = f;
+        } else if ([f.name isEqualToString:@"Administrator"]) {
+            admin.function = f;
+        }
+    }
+    
     Review *review1 = [Review insertInManagedObjectContext:ad.managedObjectContext];
     review1.theatre = theatre1;
     review1.writer = admin;
@@ -249,23 +264,80 @@
     review5.writer = manager;
     review5.desc = @"Funny, But Not Hilarious.";
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Function" inManagedObjectContext:ad.managedObjectContext];
+    fetchRequest = [[NSFetchRequest alloc] init];
+    entity = [NSEntityDescription entityForName:@"Topic" inManagedObjectContext:ad.managedObjectContext];
     [fetchRequest setEntity:entity];
-    NSArray *fetchedObjects = [ad.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    fetchedObjects = [ad.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    Topic *theatreExp;
+    Topic *movieExp;
     
-    for (Function *f in fetchedObjects) {
-        if ([f.name isEqualToString:@"Owner"]) {
-            owner.function = f;
-        } else if ([f.name isEqualToString:@"Manager"]) {
-            manager.function = f;
-        } else if ([f.name isEqualToString:@"Administrator"]) {
-            admin.function = f;
+    
+    for (Topic *t in fetchedObjects) {
+        if ([t.name isEqualToString:@"Movies"]) {
+            movieExp = t;
+        } else {
+            theatreExp = t;
         }
     }
     
+    User *u1 = [User insertInManagedObjectContext:ad.managedObjectContext];
+    u1.name = @"matt";
+    u1.userId = @"matt";
+    u1.password = @"abcd";
+    u1.emailId = @"matt@zwiffer.com";
+    u1.phone = @"7089453679";
+    u1.address = @"1011 Fake St. Chicago IL 60606";
+    u1.ccType = @"Visa";
+    u1.ccNumber = @"4640123412341234";
+    u1.ccExpiration= [NSDate distantFuture];
+    
+    User *u2 = [User insertInManagedObjectContext:ad.managedObjectContext];
+    u2.name = @"mom";
+    u2.userId = @"mom";
+    u2.password = @"abcd";
+    u2.emailId = @"mom@zwiffer.com";
+    u2.phone = @"7089453678";
+    u2.address = @"1011 Fake St. Chicago IL 60606";
+    u2.ccType = @"Visa";
+    u2.ccNumber = @"4640123412341234";
+    u2.ccExpiration= [NSDate distantFuture];
+    
+    Thread *t1 = [Thread insertInManagedObjectContext:ad.managedObjectContext];
+    t1.movie = movie1;
+    t1.topic = movieExp;
+    t1.dateCreated = [NSDate distantPast];
+    t1.name = @"Pure Awesomeness";
+    t1.userStarted = admin;
+    Thread *t2 = [Thread insertInManagedObjectContext:ad.managedObjectContext];
+    t2.theatre = theatre1;
+    t2.topic = theatreExp;
+    t2.dateCreated = [NSDate date];
+    t2.name = @"Best Popcorn Ever!";
+    t2.userStarted = manager;
+    
+    Post *p1 = [Post insertInManagedObjectContext:ad.managedObjectContext];
+    p1.thread = t1;
+    p1.dateCreated = [NSDate distantPast];
+    p1.name = @"So many heroes.";
+    p1.writer = u1;
+    Post *p2 = [Post insertInManagedObjectContext:ad.managedObjectContext];
+    p2.thread = t1;
+    p2.dateCreated = [NSDate distantPast];
+    p2.name = @"Like for real, there are a lot of heroes.";
+    p2.writer = owner;
+    
+    Post *p3 = [Post insertInManagedObjectContext:ad.managedObjectContext];
+    p3.thread = t2;
+    p3.dateCreated = [NSDate distantPast];
+    p3.name = @"I think this may have been the best popcorn I have had in my life. I will go back just to eat some of that stuff.";
+    p3.writer = admin;
+    Post *p4 = [Post insertInManagedObjectContext:ad.managedObjectContext];
+    p4.thread = t2;
+    p4.dateCreated = [NSDate date];
+    p4.name = @"I agree, that stuff is awesome.";
+    p4.writer = u2;
+    
     [ad.managedObjectContext save:nil];
-                     
 }
 
 

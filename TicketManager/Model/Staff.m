@@ -17,7 +17,7 @@
 
 + (BOOL)ownerMode {
     User *u = [User loggedInUser];
-    if (u && u.isStaff && ((Staff *)u).isManager) {
+    if (u && u.isStaff && ((Staff *)u).isOwner) {
         return YES;
     } else {
         return NO;
