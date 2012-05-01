@@ -11,6 +11,7 @@
 #import "Theatre.h"
 #import "Genre.h"
 #import "TheatreViewController.h"
+#import "ReviewViewController.h"
 
 @interface MovieViewController ()
 
@@ -149,6 +150,9 @@
 
     } else {
         //Show the review details
+        ReviewViewController *vc = [[ReviewViewController alloc] initWithNibName:nil bundle:nil];
+        vc.review = [reviews objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

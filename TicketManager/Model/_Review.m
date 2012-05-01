@@ -113,6 +113,15 @@ const struct ReviewFetchedProperties ReviewFetchedProperties = {
 @dynamic usersLiked;
 
 	
+- (NSMutableSet*)usersLikedSet {
+	[self willAccessValueForKey:@"usersLiked"];
+  
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"usersLiked"];
+  
+	[self didAccessValueForKey:@"usersLiked"];
+	return result;
+}
+	
 
 @dynamic writer;
 

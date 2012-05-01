@@ -83,9 +83,9 @@ extern const struct ReviewFetchedProperties {
 
 
 
-@property (nonatomic, strong) User* usersLiked;
+@property (nonatomic, strong) NSSet* usersLiked;
 
-//- (BOOL)validateUsersLiked:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)usersLikedSet;
 
 
 
@@ -106,6 +106,11 @@ extern const struct ReviewFetchedProperties {
 - (void)removeUsersDisliked:(NSSet*)value_;
 - (void)addUsersDislikedObject:(User*)value_;
 - (void)removeUsersDislikedObject:(User*)value_;
+
+- (void)addUsersLiked:(NSSet*)value_;
+- (void)removeUsersLiked:(NSSet*)value_;
+- (void)addUsersLikedObject:(User*)value_;
+- (void)removeUsersLikedObject:(User*)value_;
 
 @end
 
@@ -143,8 +148,8 @@ extern const struct ReviewFetchedProperties {
 
 
 
-- (User*)primitiveUsersLiked;
-- (void)setPrimitiveUsersLiked:(User*)value;
+- (NSMutableSet*)primitiveUsersLiked;
+- (void)setPrimitiveUsersLiked:(NSMutableSet*)value;
 
 
 

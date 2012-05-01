@@ -76,6 +76,8 @@
 		FA66832E1544BD4F0053B6A4 /* ObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA66832D1544BD4F0053B6A4 /* ObjectListViewController.m */; };
 		FA96B3EE154FA71300DC54D1 /* TheatreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96B3EC154FA71300DC54D1 /* TheatreViewController.m */; };
 		FA96B3EF154FA71300DC54D1 /* TheatreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA96B3ED154FA71300DC54D1 /* TheatreViewController.xib */; };
+		FA96B3F3154FB26700DC54D1 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA96B3F1154FB26600DC54D1 /* ReviewViewController.m */; };
+		FA96B3F4154FB26700DC54D1 /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA96B3F2154FB26600DC54D1 /* ReviewViewController.xib */; };
 		FADB8CF5154DAEEF00F0D175 /* UserHomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADB8CF3154DAEEF00F0D175 /* UserHomepageViewController.m */; };
 		FADB8CF6154DAEEF00F0D175 /* UserHomepageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADB8CF4154DAEEF00F0D175 /* UserHomepageViewController.xib */; };
 		FAE5F6D4154F80CA0066C686 /* QueryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE5F6D2154F80CA0066C686 /* QueryListViewController.m */; };
@@ -212,6 +214,9 @@
 		FA96B3EB154FA71300DC54D1 /* TheatreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheatreViewController.h; sourceTree = "<group>"; };
 		FA96B3EC154FA71300DC54D1 /* TheatreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheatreViewController.m; sourceTree = "<group>"; };
 		FA96B3ED154FA71300DC54D1 /* TheatreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TheatreViewController.xib; sourceTree = "<group>"; };
+		FA96B3F0154FB26600DC54D1 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		FA96B3F1154FB26600DC54D1 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		FA96B3F2154FB26600DC54D1 /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewViewController.xib; sourceTree = "<group>"; };
 		FADB8CF2154DAEEF00F0D175 /* UserHomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHomepageViewController.h; sourceTree = "<group>"; };
 		FADB8CF3154DAEEF00F0D175 /* UserHomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHomepageViewController.m; sourceTree = "<group>"; };
 		FADB8CF4154DAEEF00F0D175 /* UserHomepageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserHomepageViewController.xib; sourceTree = "<group>"; };
@@ -455,6 +460,9 @@
 				FAE8173B154E12D700254C82 /* ManagementViewController.h */,
 				FAE8173C154E12D800254C82 /* ManagementViewController.m */,
 				FAE8173D154E12D800254C82 /* ManagementViewController.xib */,
+				FA96B3F0154FB26600DC54D1 /* ReviewViewController.h */,
+				FA96B3F1154FB26600DC54D1 /* ReviewViewController.m */,
+				FA96B3F2154FB26600DC54D1 /* ReviewViewController.xib */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -564,6 +572,7 @@
 				FAE81744154E565C00254C82 /* MovieViewController.xib in Resources */,
 				FAE5F6DC154F81FE0066C686 /* QueryDetailViewController.xib in Resources */,
 				FA96B3EF154FA71300DC54D1 /* TheatreViewController.xib in Resources */,
+				FA96B3F4154FB26700DC54D1 /* ReviewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +662,7 @@
 				FAE5F6D4154F80CA0066C686 /* QueryListViewController.m in Sources */,
 				FAE5F6DB154F81FE0066C686 /* QueryDetailViewController.m in Sources */,
 				FA96B3EE154FA71300DC54D1 /* TheatreViewController.m in Sources */,
+				FA96B3F3154FB26700DC54D1 /* ReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,7 +39,7 @@
         <relationship name="movie" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Movie" inverseName="reviews" inverseEntity="Movie" syncable="YES"/>
         <relationship name="theatre" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Theatre" inverseName="reviews" inverseEntity="Theatre" syncable="YES"/>
         <relationship name="usersDisliked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="reviewsDisliked" inverseEntity="User" syncable="YES"/>
-        <relationship name="usersLiked" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviewsLiked" inverseEntity="User" syncable="YES"/>
+        <relationship name="usersLiked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="reviewsLiked" inverseEntity="User" syncable="YES"/>
         <relationship name="writer" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviewsWritten" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Screen" representedClassName="Screen" syncable="YES">

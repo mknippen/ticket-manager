@@ -191,6 +191,7 @@
     
     Staff *admin = [Staff insertInManagedObjectContext:ad.managedObjectContext];
     admin.userId = @"admin";
+    admin.name = @"admin";
     admin.password = @"admin";
     admin.address = @"3241 S. Wabash, Chicago, IL 60616";
     admin.emailId = @"admin@zwiffer.com";
@@ -198,6 +199,7 @@
     admin.ssn = @"1";
     Staff *manager = [Staff insertInManagedObjectContext:ad.managedObjectContext];
     manager.userId = @"manager";
+    manager.name = @"manager";
     manager.password = @"manager";
     manager.address = @"1872 E. Lincoln Highway. New Lenox, IL 60451";
     manager.emailId = @"phil@zwiffer.com";
@@ -206,11 +208,34 @@
     
     Staff *owner = [Staff insertInManagedObjectContext:ad.managedObjectContext];
     owner.userId = @"owner";
+    owner.name = @"owner";
     owner.password = @"owner";
     owner.address = @"233 S. Wacker Dr. Chicago, IL 60606";
     owner.emailId = @"owner@zwiffer.com";
     owner.phone = @"3125911035";
     owner.ssn = @"8";
+    
+    Review *review1 = [Review insertInManagedObjectContext:ad.managedObjectContext];
+    review1.theatre = theatre1;
+    review1.writer = admin;
+    review1.desc = @"Best movie theatre ever! I go all the time.";
+    Review *review2 = [Review insertInManagedObjectContext:ad.managedObjectContext];
+    review2.theatre = theatre1;
+    review2.writer = manager;
+    review2.desc = @"Great Service. Great People.";
+    Review *review3 = [Review insertInManagedObjectContext:ad.managedObjectContext];
+    review3.theatre = theatre2;
+    review3.writer = manager;
+    review3.desc = @"Just not quite the expierence of Knippen Theatres. If I had to choose what theatre to go to, it would not be this one again. Please never go here unless the movie is sold out at Knippen's!";
+    
+    Review *review4 = [Review insertInManagedObjectContext:ad.managedObjectContext];
+    review4.movie = movie1;
+    review4.writer = admin;
+    review4.desc = @"Pure Awesomeness.";
+    Review *review5 = [Review insertInManagedObjectContext:ad.managedObjectContext];
+    review5.movie = movie4;
+    review5.writer = manager;
+    review5.desc = @"Funny, But Not Hilarious.";
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Function" inManagedObjectContext:ad.managedObjectContext];
